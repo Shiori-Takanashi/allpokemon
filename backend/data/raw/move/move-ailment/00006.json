@@ -1,0 +1,93 @@
+{
+    "id": 6,
+    "moves": [
+        {
+            "name": "supersonic",
+            "url": "https://pokeapi.co/api/v2/move/48/"
+        },
+        {
+            "name": "psybeam",
+            "url": "https://pokeapi.co/api/v2/move/60/"
+        },
+        {
+            "name": "confusion",
+            "url": "https://pokeapi.co/api/v2/move/93/"
+        },
+        {
+            "name": "confuse-ray",
+            "url": "https://pokeapi.co/api/v2/move/109/"
+        },
+        {
+            "name": "dizzy-punch",
+            "url": "https://pokeapi.co/api/v2/move/146/"
+        },
+        {
+            "name": "sweet-kiss",
+            "url": "https://pokeapi.co/api/v2/move/186/"
+        },
+        {
+            "name": "swagger",
+            "url": "https://pokeapi.co/api/v2/move/207/"
+        },
+        {
+            "name": "dynamic-punch",
+            "url": "https://pokeapi.co/api/v2/move/223/"
+        },
+        {
+            "name": "flatter",
+            "url": "https://pokeapi.co/api/v2/move/260/"
+        },
+        {
+            "name": "teeter-dance",
+            "url": "https://pokeapi.co/api/v2/move/298/"
+        },
+        {
+            "name": "signal-beam",
+            "url": "https://pokeapi.co/api/v2/move/324/"
+        },
+        {
+            "name": "water-pulse",
+            "url": "https://pokeapi.co/api/v2/move/352/"
+        },
+        {
+            "name": "rock-climb",
+            "url": "https://pokeapi.co/api/v2/move/431/"
+        },
+        {
+            "name": "chatter",
+            "url": "https://pokeapi.co/api/v2/move/448/"
+        },
+        {
+            "name": "hurricane",
+            "url": "https://pokeapi.co/api/v2/move/542/"
+        },
+        {
+            "name": "strange-steam",
+            "url": "https://pokeapi.co/api/v2/move/790/"
+        }
+    ],
+    "name": "confusion",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Confusion"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Confundir"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Confusion"
+        }
+    ]
+}

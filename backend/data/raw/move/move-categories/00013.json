@@ -1,0 +1,435 @@
+{
+    "descriptions": [
+        {
+            "description": "Unique effect",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }
+    ],
+    "id": 13,
+    "moves": [
+        {
+            "name": "disable",
+            "url": "https://pokeapi.co/api/v2/move/50/"
+        },
+        {
+            "name": "teleport",
+            "url": "https://pokeapi.co/api/v2/move/100/"
+        },
+        {
+            "name": "mimic",
+            "url": "https://pokeapi.co/api/v2/move/102/"
+        },
+        {
+            "name": "focus-energy",
+            "url": "https://pokeapi.co/api/v2/move/116/"
+        },
+        {
+            "name": "metronome",
+            "url": "https://pokeapi.co/api/v2/move/118/"
+        },
+        {
+            "name": "mirror-move",
+            "url": "https://pokeapi.co/api/v2/move/119/"
+        },
+        {
+            "name": "transform",
+            "url": "https://pokeapi.co/api/v2/move/144/"
+        },
+        {
+            "name": "splash",
+            "url": "https://pokeapi.co/api/v2/move/150/"
+        },
+        {
+            "name": "rest",
+            "url": "https://pokeapi.co/api/v2/move/156/"
+        },
+        {
+            "name": "conversion",
+            "url": "https://pokeapi.co/api/v2/move/160/"
+        },
+        {
+            "name": "substitute",
+            "url": "https://pokeapi.co/api/v2/move/164/"
+        },
+        {
+            "name": "sketch",
+            "url": "https://pokeapi.co/api/v2/move/166/"
+        },
+        {
+            "name": "spider-web",
+            "url": "https://pokeapi.co/api/v2/move/169/"
+        },
+        {
+            "name": "mind-reader",
+            "url": "https://pokeapi.co/api/v2/move/170/"
+        },
+        {
+            "name": "curse",
+            "url": "https://pokeapi.co/api/v2/move/174/"
+        },
+        {
+            "name": "conversion-2",
+            "url": "https://pokeapi.co/api/v2/move/176/"
+        },
+        {
+            "name": "spite",
+            "url": "https://pokeapi.co/api/v2/move/180/"
+        },
+        {
+            "name": "protect",
+            "url": "https://pokeapi.co/api/v2/move/182/"
+        },
+        {
+            "name": "belly-drum",
+            "url": "https://pokeapi.co/api/v2/move/187/"
+        },
+        {
+            "name": "destiny-bond",
+            "url": "https://pokeapi.co/api/v2/move/194/"
+        },
+        {
+            "name": "detect",
+            "url": "https://pokeapi.co/api/v2/move/197/"
+        },
+        {
+            "name": "lock-on",
+            "url": "https://pokeapi.co/api/v2/move/199/"
+        },
+        {
+            "name": "endure",
+            "url": "https://pokeapi.co/api/v2/move/203/"
+        },
+        {
+            "name": "mean-look",
+            "url": "https://pokeapi.co/api/v2/move/212/"
+        },
+        {
+            "name": "sleep-talk",
+            "url": "https://pokeapi.co/api/v2/move/214/"
+        },
+        {
+            "name": "heal-bell",
+            "url": "https://pokeapi.co/api/v2/move/215/"
+        },
+        {
+            "name": "pain-split",
+            "url": "https://pokeapi.co/api/v2/move/220/"
+        },
+        {
+            "name": "baton-pass",
+            "url": "https://pokeapi.co/api/v2/move/226/"
+        },
+        {
+            "name": "encore",
+            "url": "https://pokeapi.co/api/v2/move/227/"
+        },
+        {
+            "name": "psych-up",
+            "url": "https://pokeapi.co/api/v2/move/244/"
+        },
+        {
+            "name": "future-sight",
+            "url": "https://pokeapi.co/api/v2/move/248/"
+        },
+        {
+            "name": "stockpile",
+            "url": "https://pokeapi.co/api/v2/move/254/"
+        },
+        {
+            "name": "memento",
+            "url": "https://pokeapi.co/api/v2/move/262/"
+        },
+        {
+            "name": "follow-me",
+            "url": "https://pokeapi.co/api/v2/move/266/"
+        },
+        {
+            "name": "nature-power",
+            "url": "https://pokeapi.co/api/v2/move/267/"
+        },
+        {
+            "name": "taunt",
+            "url": "https://pokeapi.co/api/v2/move/269/"
+        },
+        {
+            "name": "helping-hand",
+            "url": "https://pokeapi.co/api/v2/move/270/"
+        },
+        {
+            "name": "trick",
+            "url": "https://pokeapi.co/api/v2/move/271/"
+        },
+        {
+            "name": "role-play",
+            "url": "https://pokeapi.co/api/v2/move/272/"
+        },
+        {
+            "name": "wish",
+            "url": "https://pokeapi.co/api/v2/move/273/"
+        },
+        {
+            "name": "assist",
+            "url": "https://pokeapi.co/api/v2/move/274/"
+        },
+        {
+            "name": "magic-coat",
+            "url": "https://pokeapi.co/api/v2/move/277/"
+        },
+        {
+            "name": "recycle",
+            "url": "https://pokeapi.co/api/v2/move/278/"
+        },
+        {
+            "name": "skill-swap",
+            "url": "https://pokeapi.co/api/v2/move/285/"
+        },
+        {
+            "name": "imprison",
+            "url": "https://pokeapi.co/api/v2/move/286/"
+        },
+        {
+            "name": "refresh",
+            "url": "https://pokeapi.co/api/v2/move/287/"
+        },
+        {
+            "name": "grudge",
+            "url": "https://pokeapi.co/api/v2/move/288/"
+        },
+        {
+            "name": "snatch",
+            "url": "https://pokeapi.co/api/v2/move/289/"
+        },
+        {
+            "name": "camouflage",
+            "url": "https://pokeapi.co/api/v2/move/293/"
+        },
+        {
+            "name": "aromatherapy",
+            "url": "https://pokeapi.co/api/v2/move/312/"
+        },
+        {
+            "name": "block",
+            "url": "https://pokeapi.co/api/v2/move/335/"
+        },
+        {
+            "name": "doom-desire",
+            "url": "https://pokeapi.co/api/v2/move/353/"
+        },
+        {
+            "name": "healing-wish",
+            "url": "https://pokeapi.co/api/v2/move/361/"
+        },
+        {
+            "name": "acupressure",
+            "url": "https://pokeapi.co/api/v2/move/367/"
+        },
+        {
+            "name": "psycho-shift",
+            "url": "https://pokeapi.co/api/v2/move/375/"
+        },
+        {
+            "name": "power-trick",
+            "url": "https://pokeapi.co/api/v2/move/379/"
+        },
+        {
+            "name": "gastro-acid",
+            "url": "https://pokeapi.co/api/v2/move/380/"
+        },
+        {
+            "name": "copycat",
+            "url": "https://pokeapi.co/api/v2/move/383/"
+        },
+        {
+            "name": "power-swap",
+            "url": "https://pokeapi.co/api/v2/move/384/"
+        },
+        {
+            "name": "guard-swap",
+            "url": "https://pokeapi.co/api/v2/move/385/"
+        },
+        {
+            "name": "worry-seed",
+            "url": "https://pokeapi.co/api/v2/move/388/"
+        },
+        {
+            "name": "heart-swap",
+            "url": "https://pokeapi.co/api/v2/move/391/"
+        },
+        {
+            "name": "aqua-ring",
+            "url": "https://pokeapi.co/api/v2/move/392/"
+        },
+        {
+            "name": "magnet-rise",
+            "url": "https://pokeapi.co/api/v2/move/393/"
+        },
+        {
+            "name": "switcheroo",
+            "url": "https://pokeapi.co/api/v2/move/415/"
+        },
+        {
+            "name": "defog",
+            "url": "https://pokeapi.co/api/v2/move/432/"
+        },
+        {
+            "name": "lunar-dance",
+            "url": "https://pokeapi.co/api/v2/move/461/"
+        },
+        {
+            "name": "guard-split",
+            "url": "https://pokeapi.co/api/v2/move/470/"
+        },
+        {
+            "name": "power-split",
+            "url": "https://pokeapi.co/api/v2/move/471/"
+        },
+        {
+            "name": "rage-powder",
+            "url": "https://pokeapi.co/api/v2/move/476/"
+        },
+        {
+            "name": "soak",
+            "url": "https://pokeapi.co/api/v2/move/487/"
+        },
+        {
+            "name": "simple-beam",
+            "url": "https://pokeapi.co/api/v2/move/493/"
+        },
+        {
+            "name": "entrainment",
+            "url": "https://pokeapi.co/api/v2/move/494/"
+        },
+        {
+            "name": "after-you",
+            "url": "https://pokeapi.co/api/v2/move/495/"
+        },
+        {
+            "name": "ally-switch",
+            "url": "https://pokeapi.co/api/v2/move/502/"
+        },
+        {
+            "name": "shell-smash",
+            "url": "https://pokeapi.co/api/v2/move/504/"
+        },
+        {
+            "name": "quash",
+            "url": "https://pokeapi.co/api/v2/move/511/"
+        },
+        {
+            "name": "reflect-type",
+            "url": "https://pokeapi.co/api/v2/move/513/"
+        },
+        {
+            "name": "bestow",
+            "url": "https://pokeapi.co/api/v2/move/516/"
+        },
+        {
+            "name": "trick-or-treat",
+            "url": "https://pokeapi.co/api/v2/move/567/"
+        },
+        {
+            "name": "forests-curse",
+            "url": "https://pokeapi.co/api/v2/move/571/"
+        },
+        {
+            "name": "topsy-turvy",
+            "url": "https://pokeapi.co/api/v2/move/576/"
+        },
+        {
+            "name": "flower-shield",
+            "url": "https://pokeapi.co/api/v2/move/579/"
+        },
+        {
+            "name": "electrify",
+            "url": "https://pokeapi.co/api/v2/move/582/"
+        },
+        {
+            "name": "kings-shield",
+            "url": "https://pokeapi.co/api/v2/move/588/"
+        },
+        {
+            "name": "spiky-shield",
+            "url": "https://pokeapi.co/api/v2/move/596/"
+        },
+        {
+            "name": "powder",
+            "url": "https://pokeapi.co/api/v2/move/600/"
+        },
+        {
+            "name": "happy-hour",
+            "url": "https://pokeapi.co/api/v2/move/603/"
+        },
+        {
+            "name": "celebrate",
+            "url": "https://pokeapi.co/api/v2/move/606/"
+        },
+        {
+            "name": "hold-hands",
+            "url": "https://pokeapi.co/api/v2/move/607/"
+        },
+        {
+            "name": "baneful-bunker",
+            "url": "https://pokeapi.co/api/v2/move/661/"
+        },
+        {
+            "name": "strength-sap",
+            "url": "https://pokeapi.co/api/v2/move/668/"
+        },
+        {
+            "name": "spotlight",
+            "url": "https://pokeapi.co/api/v2/move/671/"
+        },
+        {
+            "name": "laser-focus",
+            "url": "https://pokeapi.co/api/v2/move/673/"
+        },
+        {
+            "name": "speed-swap",
+            "url": "https://pokeapi.co/api/v2/move/683/"
+        },
+        {
+            "name": "purify",
+            "url": "https://pokeapi.co/api/v2/move/685/"
+        },
+        {
+            "name": "instruct",
+            "url": "https://pokeapi.co/api/v2/move/689/"
+        },
+        {
+            "name": "max-guard",
+            "url": "https://pokeapi.co/api/v2/move/743/"
+        },
+        {
+            "name": "magic-powder",
+            "url": "https://pokeapi.co/api/v2/move/750/"
+        },
+        {
+            "name": "teatime",
+            "url": "https://pokeapi.co/api/v2/move/752/"
+        },
+        {
+            "name": "octolock",
+            "url": "https://pokeapi.co/api/v2/move/753/"
+        },
+        {
+            "name": "court-change",
+            "url": "https://pokeapi.co/api/v2/move/756/"
+        },
+        {
+            "name": "obstruct",
+            "url": "https://pokeapi.co/api/v2/move/792/"
+        },
+        {
+            "name": "corrosive-gas",
+            "url": "https://pokeapi.co/api/v2/move/810/"
+        },
+        {
+            "name": "jungle-healing",
+            "url": "https://pokeapi.co/api/v2/move/816/"
+        }
+    ],
+    "name": "unique"
+}

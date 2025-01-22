@@ -1,0 +1,126 @@
+{
+    "descriptions": [
+        {
+            "description": "Apparaît à l’éclosion d’un œuf de Pokémon, si le père connaît ce mouvement.",
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            }
+        },
+        {
+            "description": "Erscheint bei einem frisch geschlüpften Pokémon, wenn der Vater die selbe Fähigkeit hatte.",
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            }
+        },
+        {
+            "description": "Aparece en un Pokémon recién nacido, si el padre tuvo el mismo movimiento.",
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            }
+        },
+        {
+            "description": "Appears on a newly-hatched Pokémon, if the father had the same move.",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }
+    ],
+    "id": 2,
+    "name": "egg",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Œuf"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Ei"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Huevo"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Egg"
+        }
+    ],
+    "version_groups": [
+        {
+            "name": "gold-silver",
+            "url": "https://pokeapi.co/api/v2/version-group/3/"
+        },
+        {
+            "name": "crystal",
+            "url": "https://pokeapi.co/api/v2/version-group/4/"
+        },
+        {
+            "name": "ruby-sapphire",
+            "url": "https://pokeapi.co/api/v2/version-group/5/"
+        },
+        {
+            "name": "emerald",
+            "url": "https://pokeapi.co/api/v2/version-group/6/"
+        },
+        {
+            "name": "firered-leafgreen",
+            "url": "https://pokeapi.co/api/v2/version-group/7/"
+        },
+        {
+            "name": "diamond-pearl",
+            "url": "https://pokeapi.co/api/v2/version-group/8/"
+        },
+        {
+            "name": "platinum",
+            "url": "https://pokeapi.co/api/v2/version-group/9/"
+        },
+        {
+            "name": "heartgold-soulsilver",
+            "url": "https://pokeapi.co/api/v2/version-group/10/"
+        },
+        {
+            "name": "black-white",
+            "url": "https://pokeapi.co/api/v2/version-group/11/"
+        },
+        {
+            "name": "black-2-white-2",
+            "url": "https://pokeapi.co/api/v2/version-group/14/"
+        },
+        {
+            "name": "x-y",
+            "url": "https://pokeapi.co/api/v2/version-group/15/"
+        },
+        {
+            "name": "omega-ruby-alpha-sapphire",
+            "url": "https://pokeapi.co/api/v2/version-group/16/"
+        },
+        {
+            "name": "sun-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/17/"
+        },
+        {
+            "name": "ultra-sun-ultra-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/18/"
+        },
+        {
+            "name": "sword-shield",
+            "url": "https://pokeapi.co/api/v2/version-group/20/"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "id": 14,
+    "moves": [
+        {
+            "name": "yawn",
+            "url": "https://pokeapi.co/api/v2/move/281/"
+        }
+    ],
+    "name": "yawn",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Bâillement"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Bostezo"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Yawn"
+        }
+    ]
+}

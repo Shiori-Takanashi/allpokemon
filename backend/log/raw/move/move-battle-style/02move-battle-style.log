@@ -1,0 +1,14 @@
+2025-01-21 09:11:17 JST [INFO] フェッチ開始: sub_name=move-battle-style, stage=2, endpoint=https://pokeapi.co/api/v2/move-battle-style?limit=100000&offset=0
+2025-01-21 09:11:18 JST [DEBUG] GET https://pokeapi.co/api/v2/move-battle-style?limit=100000&offset=0 - status=200
+2025-01-21 09:11:18 JST [INFO] 対象アイテム数: 3 件
+2025-01-21 09:11:18 JST [DEBUG] items preview: [{'name': 'attack', 'url': 'https://pokeapi.co/api/v2/move-battle-style/1/'}, {'name': 'defense', 'url': 'https://pokeapi.co/api/v2/move-battle-style/2/'}, {'name': 'support', 'url': 'https://pokeapi.co/api/v2/move-battle-style/3/'}] (・・・)
+2025-01-21 09:11:18 JST [DEBUG] [fetch_and_save] Fetching item='defense', url='https://pokeapi.co/api/v2/move-battle-style/2/'
+2025-01-21 09:11:18 JST [DEBUG] [fetch_and_save] Fetching item='attack', url='https://pokeapi.co/api/v2/move-battle-style/1/'
+2025-01-21 09:11:18 JST [DEBUG] [fetch_and_save] Fetching item='support', url='https://pokeapi.co/api/v2/move-battle-style/3/'
+2025-01-21 09:11:18 JST [DEBUG] [fetch_and_save] GET https://pokeapi.co/api/v2/move-battle-style/2/ - status=200
+2025-01-21 09:11:18 JST [DEBUG] [fetch_and_save] Successfully wrote to C:\Users\ns69a\allpokemon\backend\data\raw\move\move-battle-style\00002.json
+2025-01-21 09:11:18 JST [DEBUG] [fetch_and_save] GET https://pokeapi.co/api/v2/move-battle-style/3/ - status=200
+2025-01-21 09:11:18 JST [DEBUG] [fetch_and_save] GET https://pokeapi.co/api/v2/move-battle-style/1/ - status=200
+2025-01-21 09:11:18 JST [DEBUG] [fetch_and_save] Successfully wrote to C:\Users\ns69a\allpokemon\backend\data\raw\move\move-battle-style\00001.json
+2025-01-21 09:11:18 JST [DEBUG] [fetch_and_save] Successfully wrote to C:\Users\ns69a\allpokemon\backend\data\raw\move\move-battle-style\00003.json
+2025-01-21 09:11:18 JST [INFO] フェッチ完了: sub_name=move-battle-style (stage=2), dir=C:\Users\ns69a\allpokemon\backend\data\raw\move\move-battle-style
