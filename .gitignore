@@ -30,8 +30,6 @@ flask/env/
 flask/.venv/
 
 # SQLite データベース
-backend/db.sqlite3
-backend/pokedex/db.sqlite3
 
 # DjangoやFlaskのマイグレーションファイル（もしDjangoを使う場合は削除しない）
 backend/pokedex/migrations/
@@ -54,33 +52,15 @@ dist/
 # ==============================
 # ログ・キャッシュ
 # ==============================
-logs/
-log/
-*.log
-*.bak
 *.cache
 
-# ==============================
-# データファイル
-# ==============================
-backend/data/raw/
-backend/data/merged/
-backend/data/exception/
-backend/data/pokemondb/
-
-backend/log/raw/
-backend/log/upload/
-backend/log/raw/game/
-backend/log/raw/move/
-backend/log/raw/pokemon/
-
-# 結果JSONデータ
-flask/test/result.json
-flask/test/result.jsonl
-flask/test/result.bak
 
 # ==============================
 # 特定の構成ファイルを除外
 # ==============================
 sample/.gitignore
 frontend/.gitignore
+_frontend/.gitignore
+backend/.gitignore
+flask/.gitignore
+src/
