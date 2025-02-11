@@ -1,0 +1,132 @@
+{
+    "form_name": "speed",
+    "form_names": [
+        {
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            },
+            "name": "スピードフォルム"
+        },
+        {
+            "language": {
+                "name": "ko",
+                "url": "https://pokeapi.co/api/v2/language/3/"
+            },
+            "name": "스피드폼"
+        },
+        {
+            "language": {
+                "name": "zh-Hant",
+                "url": "https://pokeapi.co/api/v2/language/4/"
+            },
+            "name": "速度形態"
+        },
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Forme Vitesse"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Initiativeform"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Forma Velocidad"
+        },
+        {
+            "language": {
+                "name": "it",
+                "url": "https://pokeapi.co/api/v2/language/8/"
+            },
+            "name": "Forma Velocità"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Speed Forme"
+        },
+        {
+            "language": {
+                "name": "ja",
+                "url": "https://pokeapi.co/api/v2/language/11/"
+            },
+            "name": "スピードフォルム"
+        },
+        {
+            "language": {
+                "name": "zh-Hans",
+                "url": "https://pokeapi.co/api/v2/language/12/"
+            },
+            "name": "速度形态"
+        }
+    ],
+    "form_order": 4,
+    "id": 10033,
+    "is_battle_only": false,
+    "is_default": true,
+    "is_mega": false,
+    "name": "deoxys-speed",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Deoxys Vitesse"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Deoxys (Initiative)"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Speed Deoxys"
+        }
+    ],
+    "order": 545,
+    "pokemon": {
+        "name": "deoxys-speed",
+        "url": "https://pokeapi.co/api/v2/pokemon/10003/"
+    },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/386-speed.png",
+        "back_female": null,
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/386-speed.png",
+        "back_shiny_female": null,
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10003.png",
+        "front_female": null,
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/386-speed.png",
+        "front_shiny_female": null
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "psychic",
+                "url": "https://pokeapi.co/api/v2/type/14/"
+            }
+        }
+    ],
+    "version_group": {
+        "name": "emerald",
+        "url": "https://pokeapi.co/api/v2/version-group/6/"
+    }
+}

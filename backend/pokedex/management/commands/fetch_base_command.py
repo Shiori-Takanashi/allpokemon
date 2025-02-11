@@ -1,3 +1,5 @@
+# fetch_base_command.py
+
 from __future__ import annotations
 
 import asyncio
@@ -105,19 +107,12 @@ class FetcherBaseCommand(BaseCommand):
         # 成功したアイテムも debug ログに残す
         logger.debug(f"[fetch_and_save] Successfully wrote to {file_path}")
 
-        # 100件ごとにまとめて出力するメッセージを返す
-        if id_num % 100 == 0:
-            msg = f"ID {id_num} ({name}) を保存: {file_path}"
-            logger.info(msg)  # ログファイルには info レベルで書き込む
-            # ここでは標準出力には書かずに、呼び出し元へ文字列を返す
-            return msg
-
         return None
 
     def extract_id_from_url(self, url: str) -> Optional[int]:
         """
         URL末尾の数字を ID として取り出す。失敗時は None を返す。
-        例: https://pokeapi.co/api/v2/move/13/ -> 13
+        例: https://pokeapi.co/api/v2/???/13/ -> 13
         """
         url = url.rstrip("/")
         if "/" not in url:

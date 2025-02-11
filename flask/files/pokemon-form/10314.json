@@ -1,0 +1,139 @@
+{
+    "form_name": "dusk",
+    "form_names": [
+        {
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            },
+            "name": "たそがれのたてがみ"
+        },
+        {
+            "language": {
+                "name": "ko",
+                "url": "https://pokeapi.co/api/v2/language/3/"
+            },
+            "name": "황혼의 갈기"
+        },
+        {
+            "language": {
+                "name": "zh-Hant",
+                "url": "https://pokeapi.co/api/v2/language/4/"
+            },
+            "name": "黃昏之鬃"
+        },
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Crinière du Couchant"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Abendmähne"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Melena Crepuscular"
+        },
+        {
+            "language": {
+                "name": "it",
+                "url": "https://pokeapi.co/api/v2/language/8/"
+            },
+            "name": "Criniera del Vespro"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Dusk Mane"
+        },
+        {
+            "language": {
+                "name": "ja",
+                "url": "https://pokeapi.co/api/v2/language/11/"
+            },
+            "name": "たそがれのたてがみ"
+        },
+        {
+            "language": {
+                "name": "zh-Hans",
+                "url": "https://pokeapi.co/api/v2/language/12/"
+            },
+            "name": "黄昏之鬃"
+        }
+    ],
+    "form_order": 2,
+    "id": 10314,
+    "is_battle_only": false,
+    "is_default": true,
+    "is_mega": false,
+    "name": "necrozma-dusk",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Necrozma Crinière du Couchant"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Necrozma (Abendmähne)"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Dusk Necrozma"
+        }
+    ],
+    "order": 1137,
+    "pokemon": {
+        "name": "necrozma-dusk",
+        "url": "https://pokeapi.co/api/v2/pokemon/10155/"
+    },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10155.png",
+        "back_female": null,
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10155.png",
+        "back_shiny_female": null,
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10155.png",
+        "front_female": null,
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10155.png",
+        "front_shiny_female": null
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "psychic",
+                "url": "https://pokeapi.co/api/v2/type/14/"
+            }
+        },
+        {
+            "slot": 2,
+            "type": {
+                "name": "steel",
+                "url": "https://pokeapi.co/api/v2/type/9/"
+            }
+        }
+    ],
+    "version_group": {
+        "name": "ultra-sun-ultra-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/18/"
+    }
+}

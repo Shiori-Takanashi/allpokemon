@@ -1,0 +1,86 @@
+# ==============================
+# OS関連の一時ファイル
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# 環境設定関連
+# ==============================
+.vscode/
+.env
+.env.local
+.env.development
+.env.production
+
+# ==============================
+# Python関連
+# ==============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Flask仮想環境
+backend/env/
+flask/env/
+flask/.venv/
+
+# SQLite データベース
+backend/db.sqlite3
+backend/pokedex/db.sqlite3
+
+# DjangoやFlaskのマイグレーションファイル（もしDjangoを使う場合は削除しない）
+backend/pokedex/migrations/
+
+# ==============================
+# Node.js関連
+# ==============================
+node_modules/
+.next/
+*.log
+yarn-error.log
+npm-debug.log
+
+# Next.js/React のビルド成果物
+.next/
+out/
+build/
+dist/
+
+# ==============================
+# ログ・キャッシュ
+# ==============================
+logs/
+log/
+*.log
+*.bak
+*.cache
+
+# ==============================
+# データファイル
+# ==============================
+backend/data/raw/
+backend/data/merged/
+backend/data/exception/
+backend/data/pokemondb/
+
+backend/log/raw/
+backend/log/upload/
+backend/log/raw/game/
+backend/log/raw/move/
+backend/log/raw/pokemon/
+
+# 結果JSONデータ
+flask/test/result.json
+flask/test/result.jsonl
+flask/test/result.bak
+
+# ==============================
+# 特定の構成ファイルを除外
+# ==============================
+sample/.gitignore
+frontend/.gitignore

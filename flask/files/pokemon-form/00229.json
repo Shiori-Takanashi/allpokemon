@@ -1,0 +1,46 @@
+{
+    "form_name": "",
+    "form_names": [],
+    "form_order": 1,
+    "id": 229,
+    "is_battle_only": false,
+    "is_default": true,
+    "is_mega": false,
+    "name": "houndoom",
+    "names": [],
+    "order": 358,
+    "pokemon": {
+        "name": "houndoom",
+        "url": "https://pokeapi.co/api/v2/pokemon/229/"
+    },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/229.png",
+        "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/229.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/229.png",
+        "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/229.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/229.png",
+        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/229.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/229.png",
+        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/229.png"
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "dark",
+                "url": "https://pokeapi.co/api/v2/type/17/"
+            }
+        },
+        {
+            "slot": 2,
+            "type": {
+                "name": "fire",
+                "url": "https://pokeapi.co/api/v2/type/10/"
+            }
+        }
+    ],
+    "version_group": {
+        "name": "gold-silver",
+        "url": "https://pokeapi.co/api/v2/version-group/3/"
+    }
+}

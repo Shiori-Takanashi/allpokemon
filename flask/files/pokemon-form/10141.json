@@ -1,0 +1,139 @@
+{
+    "form_name": "mega",
+    "form_names": [
+        {
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            },
+            "name": "メガギャラドス"
+        },
+        {
+            "language": {
+                "name": "ko",
+                "url": "https://pokeapi.co/api/v2/language/3/"
+            },
+            "name": "메가갸라도스"
+        },
+        {
+            "language": {
+                "name": "zh-Hant",
+                "url": "https://pokeapi.co/api/v2/language/4/"
+            },
+            "name": "超級暴鯉龍"
+        },
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Méga-Léviator"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Mega-Form"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Mega-Gyarados"
+        },
+        {
+            "language": {
+                "name": "it",
+                "url": "https://pokeapi.co/api/v2/language/8/"
+            },
+            "name": "MegaGyarados"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Mega Gyarados"
+        },
+        {
+            "language": {
+                "name": "ja",
+                "url": "https://pokeapi.co/api/v2/language/11/"
+            },
+            "name": "メガギャラドス"
+        },
+        {
+            "language": {
+                "name": "zh-Hans",
+                "url": "https://pokeapi.co/api/v2/language/12/"
+            },
+            "name": "超级暴鲤龙"
+        }
+    ],
+    "form_order": 2,
+    "id": 10141,
+    "is_battle_only": true,
+    "is_default": true,
+    "is_mega": true,
+    "name": "gyarados-mega",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Méga-Léviator"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Mega-Garados"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Mega Gyarados"
+        }
+    ],
+    "order": 213,
+    "pokemon": {
+        "name": "gyarados-mega",
+        "url": "https://pokeapi.co/api/v2/pokemon/10041/"
+    },
+    "sprites": {
+        "back_default": null,
+        "back_female": null,
+        "back_shiny": null,
+        "back_shiny_female": null,
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10041.png",
+        "front_female": null,
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10041.png",
+        "front_shiny_female": null
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "water",
+                "url": "https://pokeapi.co/api/v2/type/11/"
+            }
+        },
+        {
+            "slot": 2,
+            "type": {
+                "name": "dark",
+                "url": "https://pokeapi.co/api/v2/type/17/"
+            }
+        }
+    ],
+    "version_group": {
+        "name": "x-y",
+        "url": "https://pokeapi.co/api/v2/version-group/15/"
+    }
+}

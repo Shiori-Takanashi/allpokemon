@@ -1,0 +1,139 @@
+{
+    "form_name": "galar",
+    "form_names": [
+        {
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            },
+            "name": "ガラルのすがた"
+        },
+        {
+            "language": {
+                "name": "ko",
+                "url": "https://pokeapi.co/api/v2/language/3/"
+            },
+            "name": "가라르의 모습"
+        },
+        {
+            "language": {
+                "name": "zh-Hant",
+                "url": "https://pokeapi.co/api/v2/language/4/"
+            },
+            "name": "伽勒爾的樣子"
+        },
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Forme de Galar"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Galar-Form"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Forma de Galar"
+        },
+        {
+            "language": {
+                "name": "it",
+                "url": "https://pokeapi.co/api/v2/language/8/"
+            },
+            "name": "Forma di Galar"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Galarian Form"
+        },
+        {
+            "language": {
+                "name": "ja",
+                "url": "https://pokeapi.co/api/v2/language/11/"
+            },
+            "name": "ガラルのすがた"
+        },
+        {
+            "language": {
+                "name": "zh-Hans",
+                "url": "https://pokeapi.co/api/v2/language/12/"
+            },
+            "name": "伽勒尔的样子"
+        }
+    ],
+    "form_order": 2,
+    "id": 10333,
+    "is_battle_only": false,
+    "is_default": true,
+    "is_mega": false,
+    "name": "zigzagoon-galar",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Zigzaton de Galar"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Galar Zigzachs"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Galarian Zigzagoon"
+        }
+    ],
+    "order": 390,
+    "pokemon": {
+        "name": "zigzagoon-galar",
+        "url": "https://pokeapi.co/api/v2/pokemon/10174/"
+    },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10174.png",
+        "back_female": null,
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10174.png",
+        "back_shiny_female": null,
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10174.png",
+        "front_female": null,
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10174.png",
+        "front_shiny_female": null
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "dark",
+                "url": "https://pokeapi.co/api/v2/type/17/"
+            }
+        },
+        {
+            "slot": 2,
+            "type": {
+                "name": "normal",
+                "url": "https://pokeapi.co/api/v2/type/1/"
+            }
+        }
+    ],
+    "version_group": {
+        "name": "sword-shield",
+        "url": "https://pokeapi.co/api/v2/version-group/20/"
+    }
+}

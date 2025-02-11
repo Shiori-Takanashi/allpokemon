@@ -1,0 +1,139 @@
+{
+    "form_name": "orange",
+    "form_names": [
+        {
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            },
+            "name": "だいだいいろのコア"
+        },
+        {
+            "language": {
+                "name": "ko",
+                "url": "https://pokeapi.co/api/v2/language/3/"
+            },
+            "name": "주황색 코어"
+        },
+        {
+            "language": {
+                "name": "zh-Hant",
+                "url": "https://pokeapi.co/api/v2/language/4/"
+            },
+            "name": "橙色核心"
+        },
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Noyau Orange"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Oranger Kern"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Núcleo Naranja"
+        },
+        {
+            "language": {
+                "name": "it",
+                "url": "https://pokeapi.co/api/v2/language/8/"
+            },
+            "name": "Nucleo Arancione"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Orange Core"
+        },
+        {
+            "language": {
+                "name": "ja",
+                "url": "https://pokeapi.co/api/v2/language/11/"
+            },
+            "name": "だいだいいろのコア"
+        },
+        {
+            "language": {
+                "name": "zh-Hans",
+                "url": "https://pokeapi.co/api/v2/language/12/"
+            },
+            "name": "橙色核心"
+        }
+    ],
+    "form_order": 9,
+    "id": 10256,
+    "is_battle_only": false,
+    "is_default": true,
+    "is_mega": false,
+    "name": "minior-orange",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Météno Noyeau Orange"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Meteno (Orange)"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Orange Core Minior"
+        }
+    ],
+    "order": 1100,
+    "pokemon": {
+        "name": "minior-orange",
+        "url": "https://pokeapi.co/api/v2/pokemon/10137/"
+    },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10137.png",
+        "back_female": null,
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10137.png",
+        "back_shiny_female": null,
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10137.png",
+        "front_female": null,
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10137.png",
+        "front_shiny_female": null
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "rock",
+                "url": "https://pokeapi.co/api/v2/type/6/"
+            }
+        },
+        {
+            "slot": 2,
+            "type": {
+                "name": "flying",
+                "url": "https://pokeapi.co/api/v2/type/3/"
+            }
+        }
+    ],
+    "version_group": {
+        "name": "sun-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/17/"
+    }
+}

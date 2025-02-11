@@ -1,0 +1,46 @@
+{
+    "form_name": "",
+    "form_names": [],
+    "form_order": 1,
+    "id": 798,
+    "is_battle_only": false,
+    "is_default": true,
+    "is_mega": false,
+    "name": "kartana",
+    "names": [],
+    "order": 1134,
+    "pokemon": {
+        "name": "kartana",
+        "url": "https://pokeapi.co/api/v2/pokemon/798/"
+    },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/798.png",
+        "back_female": null,
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/798.png",
+        "back_shiny_female": null,
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/798.png",
+        "front_female": null,
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/798.png",
+        "front_shiny_female": null
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "grass",
+                "url": "https://pokeapi.co/api/v2/type/12/"
+            }
+        },
+        {
+            "slot": 2,
+            "type": {
+                "name": "steel",
+                "url": "https://pokeapi.co/api/v2/type/9/"
+            }
+        }
+    ],
+    "version_group": {
+        "name": "sun-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/17/"
+    }
+}

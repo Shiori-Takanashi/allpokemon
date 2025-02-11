@@ -1,0 +1,98 @@
+/* src/components/PokemonCards/PokemonCards.css */
+
+/* スピナーアニメーション */
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .spinner-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* メインコンテナ */
+  .pokemon-container {
+    padding: 24px;
+  }
+  
+  .top-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  
+  /* アイコンボタン共通クラス */
+  .icon-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    border: #333 solid 1px;
+    border-radius: 4px;
+  }
+  
+  .input-search {
+    width: 300px;
+    padding: 2px;
+    margin: 1px;
+  }
+  
+  .pagination-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+  
+  /* カード一覧 */
+  .pokemon-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+  
+  /* 個別カード */
+  .pokemon-card {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    width: 20%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* カード内のポケモン名 */
+  .pokemon-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0b4444;
+    margin: 0;
+  }
+  

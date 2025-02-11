@@ -1,0 +1,83 @@
+{
+    "form_name": "gmax",
+    "form_names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Forme Gigamax"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Gigadynamax-Form"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Gigantamax Form"
+        }
+    ],
+    "form_order": 1,
+    "id": 10379,
+    "is_battle_only": true,
+    "is_default": true,
+    "is_mega": false,
+    "name": "cinderace-gmax",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Pyrobut Gigamax"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Gigadynamax-Liberlo"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Gigantamax Cinderace"
+        }
+    ],
+    "order": 1264,
+    "pokemon": {
+        "name": "cinderace-gmax",
+        "url": "https://pokeapi.co/api/v2/pokemon/10210/"
+    },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10210.png",
+        "back_female": null,
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10210.png",
+        "back_shiny_female": null,
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10210.png",
+        "front_female": null,
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10210.png",
+        "front_shiny_female": null
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "fire",
+                "url": "https://pokeapi.co/api/v2/type/10/"
+            }
+        }
+    ],
+    "version_group": {
+        "name": "sword-shield",
+        "url": "https://pokeapi.co/api/v2/version-group/20/"
+    }
+}

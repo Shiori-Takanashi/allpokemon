@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-h$wxm$4j)$tl5*j3cc**8rc_13%zv0=x-g2_*wg+-5fxrcmc@k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -38,12 +38,17 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "pokedex"
-]
+    'corsheaders',
+    'storages',
+    "pokedex",
+    "api",
+    "rest_framework"
+    ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    'corsheaders.middleware.CorsMiddleware',  # 追加
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -128,3 +133,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # PokeAPI のデータを保存するベースディレクトリ
 POKEAPI_OUTPUT_DIR = os.path.join(BASE_DIR, 'data')
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # React 開発サーバーの URL
+    "http://127.0.0.1:3000",  # 別の形式でのローカル URL
+]
+
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+GS_BUCKET_NAME = 'pokemon_front_img'
+GS_CREDENTIALS = r"C:\Users\ns69a\allpokemon\backend\config\gcp_uploader.json"

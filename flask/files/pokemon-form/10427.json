@@ -1,0 +1,90 @@
+{
+    "form_name": "droopy",
+    "form_names": [
+        {
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            },
+            "name": "たれたすがた"
+        },
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Forme Affalée"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Droopy Form"
+        },
+        {
+            "language": {
+                "name": "ja",
+                "url": "https://pokeapi.co/api/v2/language/11/"
+            },
+            "name": "たれたすがた"
+        }
+    ],
+    "form_order": 2,
+    "id": 10427,
+    "is_battle_only": false,
+    "is_default": false,
+    "is_mega": false,
+    "name": "tatsugiri-droopy",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Nigirigon Forme Affalée"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Droopy Form Tatsugiri"
+        }
+    ],
+    "order": 1313,
+    "pokemon": {
+        "name": "tatsugiri-droopy",
+        "url": "https://pokeapi.co/api/v2/pokemon/10258/"
+    },
+    "sprites": {
+        "back_default": null,
+        "back_female": null,
+        "back_shiny": null,
+        "back_shiny_female": null,
+        "front_default": null,
+        "front_female": null,
+        "front_shiny": null,
+        "front_shiny_female": null
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "dragon",
+                "url": "https://pokeapi.co/api/v2/type/16/"
+            }
+        },
+        {
+            "slot": 2,
+            "type": {
+                "name": "water",
+                "url": "https://pokeapi.co/api/v2/type/11/"
+            }
+        }
+    ],
+    "version_group": {
+        "name": "scarlet-violet",
+        "url": "https://pokeapi.co/api/v2/version-group/25/"
+    }
+}

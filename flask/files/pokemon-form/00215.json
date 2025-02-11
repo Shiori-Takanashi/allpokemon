@@ -1,0 +1,46 @@
+{
+    "form_name": "",
+    "form_names": [],
+    "form_order": 1,
+    "id": 215,
+    "is_battle_only": false,
+    "is_default": true,
+    "is_mega": false,
+    "name": "sneasel",
+    "names": [],
+    "order": 340,
+    "pokemon": {
+        "name": "sneasel",
+        "url": "https://pokeapi.co/api/v2/pokemon/215/"
+    },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/215.png",
+        "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/215.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/215.png",
+        "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/215.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/215.png",
+        "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/215.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/215.png",
+        "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/215.png"
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "dark",
+                "url": "https://pokeapi.co/api/v2/type/17/"
+            }
+        },
+        {
+            "slot": 2,
+            "type": {
+                "name": "ice",
+                "url": "https://pokeapi.co/api/v2/type/15/"
+            }
+        }
+    ],
+    "version_group": {
+        "name": "gold-silver",
+        "url": "https://pokeapi.co/api/v2/version-group/3/"
+    }
+}
