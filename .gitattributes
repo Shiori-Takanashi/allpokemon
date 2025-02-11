@@ -1,0 +1,32 @@
+# すべてのテキストファイルを自動処理
+* text=auto
+
+# シェルスクリプト（Linux環境向け）
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+
+# Pythonファイル（LinuxやmacOSの環境でも動作させるため）
+*.py text eol=lf
+
+# JavaScript / TypeScript
+*.js text eol=lf
+*.ts text eol=lf
+*.jsx text eol=lf
+*.tsx text eol=lf
+
+# JSON / YAML（設定ファイル）
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# マークダウン / テキストファイル
+*.md text eol=lf
+*.txt text eol=lf
+
+# C / C++ / Go 言語
+*.c text eol=lf
+*.cpp text eol=lf
+*.h text eol=lf
+*.hpp text eol=lf
+*.go text eol=lf
