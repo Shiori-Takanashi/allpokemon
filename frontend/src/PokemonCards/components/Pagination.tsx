@@ -1,23 +1,23 @@
-// src/components/PokemonCards/ui/Pagination.tsx
 import React from "react";
 
 interface Props {
   currentPage: number;
   totalPages: number;
+  totalCount: number; // ← 総件数用のプロパティを追加
   onPrev: () => void;
   onNext: () => void;
 }
 
-const Pagination: React.FC<Props> = ({ currentPage, totalPages, onPrev, onNext }) => {
+const Pagination: React.FC<Props> = ({ currentPage, totalPages, totalCount, onPrev, onNext }) => {
   return (
-    <div className="pagination-container">
-      <div style={{ display: "flex", alignItems: "center" }}>
+    <div className="pagination-container" style={{ textAlign: "center" }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
         <button
           onClick={onPrev}
           disabled={currentPage === 1}
           style={{
             padding: "4px 8px",
-            marginRight: "16px",
+            marginRight: "24px",
             cursor: currentPage === 1 ? "not-allowed" : "pointer",
             backgroundColor: currentPage === 1 ? "#ccc" : "blue",
             color: "#fff",
@@ -27,17 +27,15 @@ const Pagination: React.FC<Props> = ({ currentPage, totalPages, onPrev, onNext }
         >
           前へ
         </button>
-
-        <span style={{ margin: "0 12px" }}>
+        <div style={{ fontSize: "18px", color: "#666" }}>
           {currentPage} / {totalPages}
-        </span>
-
+        </div>
         <button
           onClick={onNext}
           disabled={currentPage === totalPages}
           style={{
             padding: "4px 8px",
-            marginLeft: "16px",
+            marginLeft: "24px",
             cursor: currentPage === totalPages ? "not-allowed" : "pointer",
             backgroundColor: currentPage === totalPages ? "#ccc" : "blue",
             color: "#fff",
