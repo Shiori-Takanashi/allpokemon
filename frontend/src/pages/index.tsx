@@ -4,9 +4,7 @@ import PokemonCardsContent from "@/PokemonCards/PokemonCardsContent";
 
 const HelloComponent: React.FC = () => {
   return (
-    <div>
       <PokemonCardsContent />
-    </div>
   );
 };
 

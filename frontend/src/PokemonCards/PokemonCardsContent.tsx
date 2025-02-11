@@ -4,14 +4,16 @@ import React from "react";
 import "@/PokemonCards/style/PokemonCards.css";
 
 // Context の Provider と呼び出しフック
-import { PokemonCardsProvider, usePokemonCardsContext } from "@/PokemonCards/context/PokemonCardsContext";
+import { PokemonCardsProvider, usePokemonCardsContext } from "@/PokemonCards/context/Context";
 
 // 下位コンポーネント
-import TopActions from "@/PokemonCards/components/TopActions";
+import TopActions from "@/PokemonCards/components/ButtonGroup";
 import Pagination from "@/PokemonCards/components/Pagination";
 import PokemonCards from "@/PokemonCards/components/PokemonCards";
 import EndpointsModal from "@/PokemonCards/components/EndpointsModal";
 import ExplanationModal from "@/PokemonCards/components/ExplanationModal";
+import SearchModal from "@/PokemonCards/components/SearchModal";
+import LinksModal from "@/PokemonCards/components/LinksModal";
 
 /**
  * 親コンポーネント: Provider でラップ → 子要素 (InnerLayout) で状態を参照
@@ -36,6 +38,7 @@ const InnerLayout: React.FC = () => {
     isSpinner,
     isEndpointModalOpen,
     isExplanationOpen,
+    isLinksModalOpen,
     regionName,
     displayedData,
     totalPages,
@@ -45,6 +48,9 @@ const InnerLayout: React.FC = () => {
     endpoints,
     setIsEndpointModalOpen,
     setIsExplanationOpen,
+    isSearchModalOpen,
+    setIsSearchModalOpen,
+    setIsLinksModalOpen,
     setCurrentPage,
     setApiUrl,
   } = usePokemonCardsContext();
@@ -72,10 +78,21 @@ const InnerLayout: React.FC = () => {
         setApiUrl={setApiUrl}
       />
 
+      <LinksModal
+        isOpen={isLinksModalOpen}
+        onClose={() => setIsLinksModalOpen(false)}
+      />
+
       {/* ExplanationModal */}
       <ExplanationModal
         isOpen={isExplanationOpen}
         onClose={() => setIsExplanationOpen(false)}
+      />
+
+        {/* ▼★ 新規の検索モーダル */}
+      <SearchModal
+        isOpen={isSearchModalOpen}
+        onClose={() => setIsSearchModalOpen(false)}
       />
 
       {/* 地方名 */}

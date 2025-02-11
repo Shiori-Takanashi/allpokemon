@@ -1,6 +1,6 @@
 // src/components/PokemonCards/parts/EndpointsModal.tsx
 import React from "react";
-import { Endpoint } from "@/PokemonCards/hooks/usePokemonCards";
+import { Endpoint } from "@/PokemonCards/hooks/usePokemonFetch"
 
 interface EndpointsModalProps {
   isOpen: boolean;

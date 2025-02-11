@@ -1,150 +1,88 @@
 // src/components/PokemonCardsContent/hooks/usePokemonCards.ts
-import { useState, useEffect } from "react";
-import { fetchPokemons, Pokemon } from "@/PokemonCards/logics/fetchPokemons";
-import {
-  applyTypeFilter,
-  SelectOption,
-} from "@/PokemonCards/logics/filterPokemons";
-import { paginate, getTotalPages } from "@/PokemonCards/logics/pagination";
 
-// エンドポイントの型
-export interface Endpoint {
-  label: string;
-  url: string;
-}
+import { usePokemonFetch } from "./usePokemonFetch";
+import { usePokemonFilter } from "./usePokemonFilter";
+import { usePagination } from "./usePagination";
+import { useModals } from "./useModals";
+import { usePokemonUI } from "./usePokemonUI";
 
 /**
- * カスタムフック：ロジックを集約
+ * 「ポケモンカード」を扱う全ロジックを統合したカスタムフック
  */
 export function usePokemonCards() {
-  // =======================
-  //  state
-  // =======================
-  const [apiUrl, setApiUrl] = useState("http://localhost:8000/api/paldea-pokemon/");
-  const [pokemonData, setPokemonData] = useState<Pokemon[]>([]);
-  const [filteredData, setFilteredData] = useState<Pokemon[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [isLoadingAll, setIsLoadingAll] = useState<boolean>(false);
-  const [isSearching, setIsSearching] = useState<boolean>(false);
+  // 1. データ取得
+  const {
+    apiUrl,
+    setApiUrl,
+    endpoints,
+    pokemonData,
+    loading,
+    regionName,
+  } = usePokemonFetch();
 
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  // 2. フィルタ処理
+  const {
+    searchTerm,
+    setSearchTerm,
+    selectedType1,
+    setSelectedType1,
+    selectedType2,
+    setSelectedType2,
+    filteredData,
+    isSearching,
+    handleSearch,
+    handleKeyDown,
+    resetFilter,
+  } = usePokemonFilter(pokemonData);
 
-  // タイプ選択 (react-select)
-  const [selectedType1, setSelectedType1] = useState<SelectOption>({
-    value: "Any",
-    label: "Any",
-  });
-  const [selectedType2, setSelectedType2] = useState<SelectOption>({
-    value: "Any",
-    label: "Any",
-  });
+  // 3. ページネーション
+  const itemsPerPage = 30; // 1ページあたりの件数
+  const {
+    currentPage,
+    setCurrentPage,
+    showAll,
+    setShowAll,
+    isLoadingAll,
+    toggleShowAll,
+    displayedData,
+    totalPages,
+  } = usePagination(filteredData, itemsPerPage);
 
-  // ページネーション
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [itemsPerPage] = useState<number>(30);
-  const [showAll, setShowAll] = useState<boolean>(false);
+  // 4. モーダル
+  const {
+    isEndpointModalOpen,
+    setIsEndpointModalOpen,
+    isExplanationOpen,
+    setIsExplanationOpen,
+    isSearchModalOpen,
+    setIsSearchModalOpen,
+    isLinksModalOpen,
+    setIsLinksModalOpen,
+  } = useModals();
 
-  // 実数値表示
-  const [showActualStats, setShowActualStats] = useState<boolean>(false);
+  // 5. UI 表示切り替え
+  const { showActualStats, setShowActualStats } = usePokemonUI();
 
-  // モーダル制御
-  const [isEndpointModalOpen, setIsEndpointModalOpen] = useState(false);
-  const [isExplanationOpen, setIsExplanationOpen] = useState(false);
-
-  // エンドポイント一覧
-  const endpoints: Endpoint[] = [
-    { label: "全国版", url: "http://localhost:8000/api/national-pokemon/" },
-    { label: "ガラル版", url: "http://localhost:8000/api/galar-pokemon/" },
-    { label: "パルデア版", url: "http://localhost:8000/api/paldea-pokemon/" },
-  ];
-
-  // =======================
-  //  Data fetch
-  // =======================
-  useEffect(() => {
-    const doFetch = async () => {
-      setLoading(true);
-      try {
-        const data = await fetchPokemons(apiUrl);
-        setPokemonData(data);
-        setFilteredData(data);
-      } catch (error) {
-        console.error("fetchPokemons error:", error);
-      }
-      setLoading(false);
-    };
-    doFetch();
-  }, [apiUrl]);
-
-  // =======================
-  //  フィルタ処理
-  // =======================
-  const filterPokemons = (): Pokemon[] => {
-    let temp = [...pokemonData];
-
-    if (searchTerm.trim() !== "") {
-      temp = temp.filter((p) =>
-        p.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-    // タイプフィルタ
-    temp = applyTypeFilter(temp, selectedType1, selectedType2);
-    return temp;
-  };
-
-  const handleSearch = () => {
-    setIsSearching(true);
-    setTimeout(() => {
-      const result = filterPokemons();
-      setFilteredData(result);
-      setCurrentPage(1);
-      setIsSearching(false);
-    }, 300);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      handleSearch();
-    }
-  };
-
-  // =======================
-  //  すべて表示トグル
-  // =======================
-  const toggleShowAll = () => {
-    setIsLoadingAll(true);
-    setTimeout(() => {
-      setShowAll(!showAll);
-      setIsLoadingAll(false);
-    }, 300);
-  };
-
-  // =======================
-  // ページネーション
-  // =======================
-  const totalPages = getTotalPages(filteredData.length, itemsPerPage);
-  const displayedData = showAll
-    ? filteredData
-    : paginate(filteredData, currentPage, itemsPerPage);
-
-  // =======================
-  // スピナー状態
-  // =======================
+  // ------------------------
+  // スピナー表示の管理
+  // ------------------------
   const isSpinner = loading || isLoadingAll || isSearching;
 
-  // =======================
-  // 地方名
-  // =======================
-  function getRegionName(url: string) {
-    if (url.includes("national-pokemon")) return "全国版";
-    if (url.includes("galar-pokemon")) return "ガラル版";
-    if (url.includes("paldea-pokemon")) return "パルデア版";
-    return "";
-  }
-  const regionName = getRegionName(apiUrl);
+  // ------------------------
+  // すべての状態をリセットする関数
+  // ------------------------
+  const resetAllStates = () => {
+    // フィルタのリセット
+    resetFilter();
+    // ページを最初に戻す
+    setCurrentPage(1);
+    // 全表示フラグオフ
+    setShowAll(false);
+  };
 
+  // エクスポートする値をまとめる
   return {
-    // state
+    // ----- state系 -----
     apiUrl,
     endpoints,
     pokemonData,
@@ -161,12 +99,14 @@ export function usePokemonCards() {
     showActualStats,
     isEndpointModalOpen,
     isExplanationOpen,
+    isSearchModalOpen,
+    isLinksModalOpen,
     isSpinner,
     regionName,
     totalPages,
     displayedData,
 
-    // setter
+    // ----- setter -----
     setApiUrl,
     setSearchTerm,
     setSelectedType1,
@@ -175,10 +115,13 @@ export function usePokemonCards() {
     setShowActualStats,
     setIsEndpointModalOpen,
     setIsExplanationOpen,
+    setIsSearchModalOpen,
+    setIsLinksModalOpen,
 
-    // actions
+    // ----- actions -----
     handleSearch,
     handleKeyDown,
     toggleShowAll,
+    resetAllStates,
   };
 }

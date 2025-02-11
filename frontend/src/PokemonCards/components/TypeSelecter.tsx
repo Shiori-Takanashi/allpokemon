@@ -1,9 +1,9 @@
 // src/components/PokemonCards/ui/TypeSelect.tsx
 import React from "react";
 import ReactSelect from "react-select";
-import { FaSearch } from "react-icons/fa";
 
-import { usePokemonCardsContext } from "../context/PokemonCardsContext";
+
+import { usePokemonCardsContext } from "../context/Context";
 import { typeOptionsReact, SelectOption } from "../logics/filterPokemons";
 
 const selectCustomStyles: any = {
@@ -31,7 +31,7 @@ interface Props {
   icon?: React.ReactNode;
 }
 
-const TypeSelect: React.FC<Props> = ({ onSearchClick, icon }) => {
+const TypeSelect: React.FC<Props> = () => {
   const {
     selectedType1,
     selectedType2,
@@ -60,20 +60,6 @@ const TypeSelect: React.FC<Props> = ({ onSearchClick, icon }) => {
           styles={selectCustomStyles}
           isSearchable={false}
         />
-        <button
-          onClick={onSearchClick}
-          style={{
-            border: "none",
-            backgroundColor: "blue",
-            color: "#fff",
-            padding: "6px 10px",
-            borderRadius: "4px",
-            cursor: "pointer",
-          }}
-          title="検索"
-        >
-          {icon ? icon : <FaSearch />}
-        </button>
       </div>
     </div>
   );

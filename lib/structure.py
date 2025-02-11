@@ -2,9 +2,6 @@ import os
 import re
 
 def is_sequential_files(file_list):
-    """
-    連番と判断できたら、まるで数字がダンスしているかのように「スキップ」表示します。
-    """
     if not file_list:
         return False
 
@@ -36,7 +33,9 @@ def generate_directory_structure(output_file="directory_structure.txt"):
         re.compile(r'^\.git$'),
         re.compile(r'^node_modules$'),
         re.compile(r'^node$'),
-        re.compile(r'^__pycache__$')
+        re.compile(r'^__pycache__$'),
+        re.compile(r'^npx-sample$'),
+        re.compile(r'^chakra$')
     ]
 
     def is_excluded(dirname):

@@ -49,11 +49,9 @@
     display: flex;
     justify-content: center;
     border: #333 solid 1px;
-    border-radius: 4px;
   }
   
   .input-search {
-    width: 300px;
     padding: 2px;
     margin: 1px;
   }
