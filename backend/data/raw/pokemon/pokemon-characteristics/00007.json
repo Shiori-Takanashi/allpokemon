@@ -1,0 +1,89 @@
+{
+    "descriptions": [
+        {
+            "description": "ひるねを　よくする",
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            }
+        },
+        {
+            "description": "낮잠을 잘 잠",
+            "language": {
+                "name": "ko",
+                "url": "https://pokeapi.co/api/v2/language/3/"
+            }
+        },
+        {
+            "description": "經常睡午覺",
+            "language": {
+                "name": "zh-Hant",
+                "url": "https://pokeapi.co/api/v2/language/4/"
+            }
+        },
+        {
+            "description": "Il s’assoupit souvent",
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            }
+        },
+        {
+            "description": "Nickt oft ein",
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            }
+        },
+        {
+            "description": "A menudo se duerme",
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            }
+        },
+        {
+            "description": "Si addormenta spesso",
+            "language": {
+                "name": "it",
+                "url": "https://pokeapi.co/api/v2/language/8/"
+            }
+        },
+        {
+            "description": "Takes plenty of siestas",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        },
+        {
+            "description": "昼寝を　よくする",
+            "language": {
+                "name": "ja",
+                "url": "https://pokeapi.co/api/v2/language/11/"
+            }
+        },
+        {
+            "description": "经常睡午觉",
+            "language": {
+                "name": "zh-Hans",
+                "url": "https://pokeapi.co/api/v2/language/12/"
+            }
+        }
+    ],
+    "gene_modulo": 1,
+    "highest_stat": {
+        "name": "hp",
+        "url": "https://pokeapi.co/api/v2/stat/1/"
+    },
+    "id": 7,
+    "possible_values": [
+        1,
+        6,
+        11,
+        16,
+        21,
+        26,
+        31
+    ]
+}

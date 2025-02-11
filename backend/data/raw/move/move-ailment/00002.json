@@ -1,0 +1,61 @@
+{
+    "id": 2,
+    "moves": [
+        {
+            "name": "sing",
+            "url": "https://pokeapi.co/api/v2/move/47/"
+        },
+        {
+            "name": "sleep-powder",
+            "url": "https://pokeapi.co/api/v2/move/79/"
+        },
+        {
+            "name": "hypnosis",
+            "url": "https://pokeapi.co/api/v2/move/95/"
+        },
+        {
+            "name": "lovely-kiss",
+            "url": "https://pokeapi.co/api/v2/move/142/"
+        },
+        {
+            "name": "spore",
+            "url": "https://pokeapi.co/api/v2/move/147/"
+        },
+        {
+            "name": "grass-whistle",
+            "url": "https://pokeapi.co/api/v2/move/320/"
+        },
+        {
+            "name": "dark-void",
+            "url": "https://pokeapi.co/api/v2/move/464/"
+        },
+        {
+            "name": "relic-song",
+            "url": "https://pokeapi.co/api/v2/move/547/"
+        }
+    ],
+    "name": "sleep",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Sommeil"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Dormir"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Sleep"
+        }
+    ]
+}

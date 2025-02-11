@@ -1,0 +1,69 @@
+{
+    "id": 8,
+    "moves": [
+        {
+            "name": "bind",
+            "url": "https://pokeapi.co/api/v2/move/20/"
+        },
+        {
+            "name": "wrap",
+            "url": "https://pokeapi.co/api/v2/move/35/"
+        },
+        {
+            "name": "fire-spin",
+            "url": "https://pokeapi.co/api/v2/move/83/"
+        },
+        {
+            "name": "clamp",
+            "url": "https://pokeapi.co/api/v2/move/128/"
+        },
+        {
+            "name": "whirlpool",
+            "url": "https://pokeapi.co/api/v2/move/250/"
+        },
+        {
+            "name": "sand-tomb",
+            "url": "https://pokeapi.co/api/v2/move/328/"
+        },
+        {
+            "name": "magma-storm",
+            "url": "https://pokeapi.co/api/v2/move/463/"
+        },
+        {
+            "name": "infestation",
+            "url": "https://pokeapi.co/api/v2/move/611/"
+        },
+        {
+            "name": "snap-trap",
+            "url": "https://pokeapi.co/api/v2/move/779/"
+        },
+        {
+            "name": "thunder-cage",
+            "url": "https://pokeapi.co/api/v2/move/819/"
+        }
+    ],
+    "name": "trap",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Piège"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Atrapado"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Trap"
+        }
+    ]
+}

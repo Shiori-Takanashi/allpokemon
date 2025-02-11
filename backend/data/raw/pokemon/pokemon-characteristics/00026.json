@@ -1,0 +1,88 @@
+{
+    "descriptions": [
+        {
+            "description": "ちのけが　おおい",
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            }
+        },
+        {
+            "description": "혈기가 왕성함",
+            "language": {
+                "name": "ko",
+                "url": "https://pokeapi.co/api/v2/language/3/"
+            }
+        },
+        {
+            "description": "血氣方剛",
+            "language": {
+                "name": "zh-Hant",
+                "url": "https://pokeapi.co/api/v2/language/4/"
+            }
+        },
+        {
+            "description": "Il s’emporte facilement",
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            }
+        },
+        {
+            "description": "Ist impulsiv",
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            }
+        },
+        {
+            "description": "Tiene mal genio",
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            }
+        },
+        {
+            "description": "È facilmente irritabile",
+            "language": {
+                "name": "it",
+                "url": "https://pokeapi.co/api/v2/language/8/"
+            }
+        },
+        {
+            "description": "Quick tempered",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        },
+        {
+            "description": "血の気が　多い",
+            "language": {
+                "name": "ja",
+                "url": "https://pokeapi.co/api/v2/language/11/"
+            }
+        },
+        {
+            "description": "血气方刚",
+            "language": {
+                "name": "zh-Hans",
+                "url": "https://pokeapi.co/api/v2/language/12/"
+            }
+        }
+    ],
+    "gene_modulo": 4,
+    "highest_stat": {
+        "name": "attack",
+        "url": "https://pokeapi.co/api/v2/stat/2/"
+    },
+    "id": 26,
+    "possible_values": [
+        4,
+        9,
+        14,
+        19,
+        24,
+        29
+    ]
+}

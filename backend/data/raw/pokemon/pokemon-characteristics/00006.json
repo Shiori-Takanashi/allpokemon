@@ -1,0 +1,89 @@
+{
+    "descriptions": [
+        {
+            "description": "かけっこが　すき",
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            }
+        },
+        {
+            "description": "달리기를 좋아함",
+            "language": {
+                "name": "ko",
+                "url": "https://pokeapi.co/api/v2/language/3/"
+            }
+        },
+        {
+            "description": "喜歡比誰跑得快",
+            "language": {
+                "name": "zh-Hant",
+                "url": "https://pokeapi.co/api/v2/language/4/"
+            }
+        },
+        {
+            "description": "Il aime la vitesse",
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            }
+        },
+        {
+            "description": "Ist gerne schnell unterwegs",
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            }
+        },
+        {
+            "description": "Le gusta ir muy rápido",
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            }
+        },
+        {
+            "description": "Adora andare veloce",
+            "language": {
+                "name": "it",
+                "url": "https://pokeapi.co/api/v2/language/8/"
+            }
+        },
+        {
+            "description": "Likes to run",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        },
+        {
+            "description": "駆けっこが　好き",
+            "language": {
+                "name": "ja",
+                "url": "https://pokeapi.co/api/v2/language/11/"
+            }
+        },
+        {
+            "description": "喜欢比谁跑得快",
+            "language": {
+                "name": "zh-Hans",
+                "url": "https://pokeapi.co/api/v2/language/12/"
+            }
+        }
+    ],
+    "gene_modulo": 0,
+    "highest_stat": {
+        "name": "speed",
+        "url": "https://pokeapi.co/api/v2/stat/6/"
+    },
+    "id": 6,
+    "possible_values": [
+        0,
+        5,
+        10,
+        15,
+        20,
+        25,
+        30
+    ]
+}

@@ -1,0 +1,458 @@
+{
+    "affecting_moves": {
+        "decrease": [
+            {
+                "change": -1,
+                "move": {
+                    "name": "tail-whip",
+                    "url": "https://pokeapi.co/api/v2/move/39/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "leer",
+                    "url": "https://pokeapi.co/api/v2/move/43/"
+                }
+            },
+            {
+                "change": -2,
+                "move": {
+                    "name": "screech",
+                    "url": "https://pokeapi.co/api/v2/move/103/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "iron-tail",
+                    "url": "https://pokeapi.co/api/v2/move/231/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "crunch",
+                    "url": "https://pokeapi.co/api/v2/move/242/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "rock-smash",
+                    "url": "https://pokeapi.co/api/v2/move/249/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "superpower",
+                    "url": "https://pokeapi.co/api/v2/move/276/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "crush-claw",
+                    "url": "https://pokeapi.co/api/v2/move/306/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "tickle",
+                    "url": "https://pokeapi.co/api/v2/move/321/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "close-combat",
+                    "url": "https://pokeapi.co/api/v2/move/370/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "shell-smash",
+                    "url": "https://pokeapi.co/api/v2/move/504/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "razor-shell",
+                    "url": "https://pokeapi.co/api/v2/move/534/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "v-create",
+                    "url": "https://pokeapi.co/api/v2/move/557/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "dragon-ascent",
+                    "url": "https://pokeapi.co/api/v2/move/620/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "hyperspace-fury",
+                    "url": "https://pokeapi.co/api/v2/move/621/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "fire-lash",
+                    "url": "https://pokeapi.co/api/v2/move/680/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "clanging-scales",
+                    "url": "https://pokeapi.co/api/v2/move/691/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "shadow-bone",
+                    "url": "https://pokeapi.co/api/v2/move/708/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "liquidation",
+                    "url": "https://pokeapi.co/api/v2/move/710/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "grav-apple",
+                    "url": "https://pokeapi.co/api/v2/move/788/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "thunderous-kick",
+                    "url": "https://pokeapi.co/api/v2/move/823/"
+                }
+            }
+        ],
+        "increase": [
+            {
+                "change": 1,
+                "move": {
+                    "name": "harden",
+                    "url": "https://pokeapi.co/api/v2/move/106/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "withdraw",
+                    "url": "https://pokeapi.co/api/v2/move/110/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "defense-curl",
+                    "url": "https://pokeapi.co/api/v2/move/111/"
+                }
+            },
+            {
+                "change": 2,
+                "move": {
+                    "name": "barrier",
+                    "url": "https://pokeapi.co/api/v2/move/112/"
+                }
+            },
+            {
+                "change": 2,
+                "move": {
+                    "name": "acid-armor",
+                    "url": "https://pokeapi.co/api/v2/move/151/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "steel-wing",
+                    "url": "https://pokeapi.co/api/v2/move/211/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "ancient-power",
+                    "url": "https://pokeapi.co/api/v2/move/246/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "stockpile",
+                    "url": "https://pokeapi.co/api/v2/move/254/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "silver-wind",
+                    "url": "https://pokeapi.co/api/v2/move/318/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "cosmic-power",
+                    "url": "https://pokeapi.co/api/v2/move/322/"
+                }
+            },
+            {
+                "change": 2,
+                "move": {
+                    "name": "iron-defense",
+                    "url": "https://pokeapi.co/api/v2/move/334/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "bulk-up",
+                    "url": "https://pokeapi.co/api/v2/move/339/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "defend-order",
+                    "url": "https://pokeapi.co/api/v2/move/455/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "ominous-wind",
+                    "url": "https://pokeapi.co/api/v2/move/466/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "coil",
+                    "url": "https://pokeapi.co/api/v2/move/489/"
+                }
+            },
+            {
+                "change": 3,
+                "move": {
+                    "name": "cotton-guard",
+                    "url": "https://pokeapi.co/api/v2/move/538/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "flower-shield",
+                    "url": "https://pokeapi.co/api/v2/move/579/"
+                }
+            },
+            {
+                "change": 2,
+                "move": {
+                    "name": "diamond-storm",
+                    "url": "https://pokeapi.co/api/v2/move/591/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "magnetic-flux",
+                    "url": "https://pokeapi.co/api/v2/move/602/"
+                }
+            },
+            {
+                "change": 2,
+                "move": {
+                    "name": "extreme-evoboost",
+                    "url": "https://pokeapi.co/api/v2/move/702/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "clangorous-soulblaze",
+                    "url": "https://pokeapi.co/api/v2/move/728/"
+                }
+            },
+            {
+                "change": 2,
+                "move": {
+                    "name": "stuff-cheeks",
+                    "url": "https://pokeapi.co/api/v2/move/747/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "no-retreat",
+                    "url": "https://pokeapi.co/api/v2/move/748/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "clangorous-soul",
+                    "url": "https://pokeapi.co/api/v2/move/775/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "coaching",
+                    "url": "https://pokeapi.co/api/v2/move/811/"
+                }
+            }
+        ]
+    },
+    "affecting_natures": {
+        "decrease": [
+            {
+                "name": "lonely",
+                "url": "https://pokeapi.co/api/v2/nature/6/"
+            },
+            {
+                "name": "mild",
+                "url": "https://pokeapi.co/api/v2/nature/8/"
+            },
+            {
+                "name": "gentle",
+                "url": "https://pokeapi.co/api/v2/nature/9/"
+            },
+            {
+                "name": "hasty",
+                "url": "https://pokeapi.co/api/v2/nature/10/"
+            }
+        ],
+        "increase": [
+            {
+                "name": "bold",
+                "url": "https://pokeapi.co/api/v2/nature/2/"
+            },
+            {
+                "name": "impish",
+                "url": "https://pokeapi.co/api/v2/nature/12/"
+            },
+            {
+                "name": "lax",
+                "url": "https://pokeapi.co/api/v2/nature/18/"
+            },
+            {
+                "name": "relaxed",
+                "url": "https://pokeapi.co/api/v2/nature/22/"
+            }
+        ]
+    },
+    "characteristics": [
+        {
+            "url": "https://pokeapi.co/api/v2/characteristic/3/"
+        },
+        {
+            "url": "https://pokeapi.co/api/v2/characteristic/9/"
+        },
+        {
+            "url": "https://pokeapi.co/api/v2/characteristic/15/"
+        },
+        {
+            "url": "https://pokeapi.co/api/v2/characteristic/21/"
+        },
+        {
+            "url": "https://pokeapi.co/api/v2/characteristic/27/"
+        }
+    ],
+    "game_index": 3,
+    "id": 3,
+    "is_battle_only": false,
+    "move_damage_class": {
+        "name": "physical",
+        "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
+    },
+    "name": "defense",
+    "names": [
+        {
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            },
+            "name": "ぼうぎょ"
+        },
+        {
+            "language": {
+                "name": "ko",
+                "url": "https://pokeapi.co/api/v2/language/3/"
+            },
+            "name": "방어"
+        },
+        {
+            "language": {
+                "name": "zh-Hant",
+                "url": "https://pokeapi.co/api/v2/language/4/"
+            },
+            "name": "防禦"
+        },
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Défense"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Verteidigung"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Defensa"
+        },
+        {
+            "language": {
+                "name": "it",
+                "url": "https://pokeapi.co/api/v2/language/8/"
+            },
+            "name": "Difesa"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Defense"
+        },
+        {
+            "language": {
+                "name": "zh-Hans",
+                "url": "https://pokeapi.co/api/v2/language/12/"
+            },
+            "name": "防御"
+        }
+    ]
+}

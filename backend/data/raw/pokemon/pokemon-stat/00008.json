@@ -1,0 +1,118 @@
+{
+    "affecting_moves": {
+        "decrease": [
+            {
+                "change": -2,
+                "move": {
+                    "name": "sweet-scent",
+                    "url": "https://pokeapi.co/api/v2/move/230/"
+                }
+            },
+            {
+                "change": -1,
+                "move": {
+                    "name": "defog",
+                    "url": "https://pokeapi.co/api/v2/move/432/"
+                }
+            }
+        ],
+        "increase": [
+            {
+                "change": 1,
+                "move": {
+                    "name": "double-team",
+                    "url": "https://pokeapi.co/api/v2/move/104/"
+                }
+            },
+            {
+                "change": 2,
+                "move": {
+                    "name": "minimize",
+                    "url": "https://pokeapi.co/api/v2/move/107/"
+                }
+            },
+            {
+                "change": 1,
+                "move": {
+                    "name": "zippy-zap",
+                    "url": "https://pokeapi.co/api/v2/move/729/"
+                }
+            }
+        ]
+    },
+    "affecting_natures": {
+        "decrease": [],
+        "increase": []
+    },
+    "characteristics": [],
+    "game_index": 0,
+    "id": 8,
+    "is_battle_only": true,
+    "move_damage_class": null,
+    "name": "evasion",
+    "names": [
+        {
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            },
+            "name": "かいひ"
+        },
+        {
+            "language": {
+                "name": "ko",
+                "url": "https://pokeapi.co/api/v2/language/3/"
+            },
+            "name": "회피율"
+        },
+        {
+            "language": {
+                "name": "zh-Hant",
+                "url": "https://pokeapi.co/api/v2/language/4/"
+            },
+            "name": "閃避"
+        },
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Esquive"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Fluchtwert"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Evasión"
+        },
+        {
+            "language": {
+                "name": "it",
+                "url": "https://pokeapi.co/api/v2/language/8/"
+            },
+            "name": "elusione"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "evasion"
+        },
+        {
+            "language": {
+                "name": "zh-Hans",
+                "url": "https://pokeapi.co/api/v2/language/12/"
+            },
+            "name": "闪避"
+        }
+    ]
+}

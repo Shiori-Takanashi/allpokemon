@@ -1,0 +1,117 @@
+{
+    "id": 4,
+    "moves": [
+        {
+            "name": "fire-punch",
+            "url": "https://pokeapi.co/api/v2/move/7/"
+        },
+        {
+            "name": "ember",
+            "url": "https://pokeapi.co/api/v2/move/52/"
+        },
+        {
+            "name": "flamethrower",
+            "url": "https://pokeapi.co/api/v2/move/53/"
+        },
+        {
+            "name": "fire-blast",
+            "url": "https://pokeapi.co/api/v2/move/126/"
+        },
+        {
+            "name": "flame-wheel",
+            "url": "https://pokeapi.co/api/v2/move/172/"
+        },
+        {
+            "name": "sacred-fire",
+            "url": "https://pokeapi.co/api/v2/move/221/"
+        },
+        {
+            "name": "heat-wave",
+            "url": "https://pokeapi.co/api/v2/move/257/"
+        },
+        {
+            "name": "will-o-wisp",
+            "url": "https://pokeapi.co/api/v2/move/261/"
+        },
+        {
+            "name": "blaze-kick",
+            "url": "https://pokeapi.co/api/v2/move/299/"
+        },
+        {
+            "name": "flare-blitz",
+            "url": "https://pokeapi.co/api/v2/move/394/"
+        },
+        {
+            "name": "fire-fang",
+            "url": "https://pokeapi.co/api/v2/move/424/"
+        },
+        {
+            "name": "lava-plume",
+            "url": "https://pokeapi.co/api/v2/move/436/"
+        },
+        {
+            "name": "scald",
+            "url": "https://pokeapi.co/api/v2/move/503/"
+        },
+        {
+            "name": "inferno",
+            "url": "https://pokeapi.co/api/v2/move/517/"
+        },
+        {
+            "name": "searing-shot",
+            "url": "https://pokeapi.co/api/v2/move/545/"
+        },
+        {
+            "name": "blue-flare",
+            "url": "https://pokeapi.co/api/v2/move/551/"
+        },
+        {
+            "name": "ice-burn",
+            "url": "https://pokeapi.co/api/v2/move/554/"
+        },
+        {
+            "name": "steam-eruption",
+            "url": "https://pokeapi.co/api/v2/move/592/"
+        },
+        {
+            "name": "sizzly-slide",
+            "url": "https://pokeapi.co/api/v2/move/735/"
+        },
+        {
+            "name": "pyro-ball",
+            "url": "https://pokeapi.co/api/v2/move/780/"
+        },
+        {
+            "name": "burning-jealousy",
+            "url": "https://pokeapi.co/api/v2/move/807/"
+        },
+        {
+            "name": "scorching-sands",
+            "url": "https://pokeapi.co/api/v2/move/815/"
+        }
+    ],
+    "name": "burn",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Brûlure"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Quemar"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Burn"
+        }
+    ]
+}

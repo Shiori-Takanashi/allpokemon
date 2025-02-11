@@ -58,9 +58,4 @@ dist/
 # ==============================
 # 特定の構成ファイルを除外
 # ==============================
-sample/.gitignore
-frontend/.gitignore
-_frontend/.gitignore
-backend/.gitignore
-flask/.gitignore
-src/
+src/components/ui

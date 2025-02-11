@@ -1,0 +1,59 @@
+{
+    "descriptions": [
+        {
+            "description": "Inflicts damage; absorbs damage done to heal the user",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }
+    ],
+    "id": 8,
+    "moves": [
+        {
+            "name": "absorb",
+            "url": "https://pokeapi.co/api/v2/move/71/"
+        },
+        {
+            "name": "mega-drain",
+            "url": "https://pokeapi.co/api/v2/move/72/"
+        },
+        {
+            "name": "dream-eater",
+            "url": "https://pokeapi.co/api/v2/move/138/"
+        },
+        {
+            "name": "leech-life",
+            "url": "https://pokeapi.co/api/v2/move/141/"
+        },
+        {
+            "name": "giga-drain",
+            "url": "https://pokeapi.co/api/v2/move/202/"
+        },
+        {
+            "name": "drain-punch",
+            "url": "https://pokeapi.co/api/v2/move/409/"
+        },
+        {
+            "name": "horn-leech",
+            "url": "https://pokeapi.co/api/v2/move/532/"
+        },
+        {
+            "name": "parabolic-charge",
+            "url": "https://pokeapi.co/api/v2/move/570/"
+        },
+        {
+            "name": "draining-kiss",
+            "url": "https://pokeapi.co/api/v2/move/577/"
+        },
+        {
+            "name": "oblivion-wing",
+            "url": "https://pokeapi.co/api/v2/move/613/"
+        },
+        {
+            "name": "bouncy-bubble",
+            "url": "https://pokeapi.co/api/v2/move/733/"
+        }
+    ],
+    "name": "damage+heal"
+}
