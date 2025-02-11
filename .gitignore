@@ -8,7 +8,7 @@ Thumbs.db
 # 環境設定関連
 # ==============================
 .vscode/
-.env
+.env*
 .env.local
 .env.development
 .env.production
@@ -30,18 +30,22 @@ flask/env/
 flask/.venv/
 
 # SQLite データベース
+db.sqlite3
 
-# DjangoやFlaskのマイグレーションファイル（もしDjangoを使う場合は削除しない）
+# DjangoやFlaskのマイグレーションファイル（Djangoを使う場合は必要に応じて削除）
 backend/pokedex/migrations/
 
 # ==============================
 # Node.js関連
 # ==============================
 node_modules/
-.next/
-*.log
-yarn-error.log
-npm-debug.log
+.pnp/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
 # Next.js/React のビルド成果物
 .next/
@@ -50,12 +54,37 @@ build/
 dist/
 
 # ==============================
+# テスト関連
+# ==============================
+coverage/
+
+# ==============================
 # ログ・キャッシュ
 # ==============================
+*.log
+yarn-error.log
+npm-debug.log
+.pnpm-debug.log*
 *.cache
-
 
 # ==============================
 # 特定の構成ファイルを除外
 # ==============================
-src/components/ui
+.src/*
+trach/
+
+# ==============================
+# Vercel関連
+# ==============================
+.vercel
+
+# ==============================
+# TypeScript関連
+# ==============================
+*.tsbuildinfo
+next-env.d.ts
+
+# ==============================
+# その他
+# ==============================
+*.pem
