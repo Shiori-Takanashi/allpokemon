@@ -1,5 +1,5 @@
 # すべてのテキストファイルを自動処理
-* text=auto
+* text=auto eol=lf
 
 # シェルスクリプト（Linux環境向け）
 *.sh text eol=lf
