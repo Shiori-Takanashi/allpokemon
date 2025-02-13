@@ -1,0 +1,58 @@
+/* ポケモンタイプの表示 */
+.pokemon-types {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3px;
+  }
+  
+  .pokemon-type {
+    background-color: skyblue;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;  /* デフォルトのフォントサイズ */
+  }
+  
+  /* ==================== メディアクエリ ==================== */
+  
+  /* スマートフォン（最大480px） */
+  @media (max-width: 480px) {
+    .pokemon-type {
+      font-size: 0.8rem;  /* スマートフォンでは少し小さめに */
+      padding: 3px 6px;  /* パディングも少し小さく */
+    }
+  }
+  
+  /* タブレット（481px〜768px） */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .pokemon-type {
+      font-size: 0.9rem;  /* タブレットでは標準的なサイズ */
+      padding: 3px 6px;  /* パディングを標準に戻す */
+    }
+  }
+  
+  /* 小型ノートPC（769px〜1024px） */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .pokemon-type {
+      font-size: 0.8rem;  /* 小型ノートPCでは少し大きく */
+      padding: 3px 6px;  /* パディングも大きく */
+    }
+  }
+  
+  /* 中型ノートPC（1025px〜1280px） */
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .pokemon-type {
+      font-size: 0.9rem;  /* 中型ノートPCではさらに大きく */
+      padding: 3px 6px;  /* パディングも調整 */
+    }
+  }
+  
+  /* デスクトップ（1281px以上） */
+  @media (min-width: 1281px) {
+    .pokemon-type {
+      font-size: 1rem;  /* デスクトップ用に最適化されたサイズ */
+      padding: 3px 6px;  /* パディングも大きめ */
+    }
+  }
+  

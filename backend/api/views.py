@@ -42,9 +42,8 @@ class BasePokemonListView(ListAPIView):
     ※ get_result() は全クラスで共通の処理とするため、override しないでください。
     """
     serializer_class = DefaultSerializer
-    total_line = 480  # 例：TOTAL_LINEの値（必要に応じて変更）
+    total_line = 0  # 例：TOTAL_LINEの値（必要に応じて変更）
 
-    # Python 3.8以降なら @final を使える
     @final
     def get_result(self, pokemon):
         """
@@ -52,7 +51,11 @@ class BasePokemonListView(ListAPIView):
         sub_ja に「メガ」が含まれる場合はその値を name とし、
         それ以外は "ja(sub_ja)" 形式で name を生成します。
         """
-        name = pokemon.sub_ja if pokemon.sub_ja and "メガ" in pokemon.sub_ja else f"{pokemon.ja}({pokemon.sub_ja})" if pokemon.sub_ja else pokemon.ja
+        name = (
+            pokemon.sub_ja
+            if pokemon.sub_ja and "メガ" in pokemon.sub_ja
+            else f"{pokemon.ja}({pokemon.sub_ja})" if pokemon.sub_ja else pokemon.ja
+        )
 
         return {
             "unique_id": pokemon.unique_id,
@@ -67,13 +70,20 @@ class BasePokemonListView(ListAPIView):
             "base_d": pokemon.base_d,
             "base_s": pokemon.base_s,
             "base_t": pokemon.base_t,
-            "img": pokemon.front_default_url 
+            "img": pokemon.front_default_url  # 画像URLフィールド
         }
 
     def list(self, request, *args, **kwargs):
-        queryset = self.get_queryset()
+        # get_queryset() で取得したクエリセットから、front_default_url が
+        # null でなく、かつ空文字（""）ではないものだけをフィルタリング
+        queryset = (
+            self.get_queryset()
+            .filter(front_default_url__isnull=False)
+            .exclude(front_default_url__exact="")
+        )
         results = [self.get_result(pokemon) for pokemon in queryset]
         return Response(results)
+
     
 
     

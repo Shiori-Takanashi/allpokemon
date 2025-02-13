@@ -1,0 +1,81 @@
+/* // src/PokemonCards/style/SearchModal.css */
+
+/* 
+  オーバーレイ全体のスタイル
+  - モーダルが画面全体に固定され、半透明の背景で中央に配置されます
+*/
+.search-modal-overlay {
+    position: fixed;
+    inset: 0; /* 画面全体を覆う */
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  /* 
+    モーダルコンテンツのスタイル
+    - 白い背景、パディング、角丸が設定されています
+    - relative で内部に絶対配置する要素（閉じるボタン）を配置可能にします
+  */
+  .search-modal-content {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  /* 
+    閉じるボタンのスタイル
+    - 右上に絶対配置され、背景が透明で大きなフォントサイズです
+  */
+  .search-modal-close-button {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+  }
+  
+  /* 
+    検索入力フィールドを包むコンテナ
+    - 上部に十分な余白を設けています
+  */
+  .search-modal-input-wrapper {
+    margin-top: 40px;
+  }
+  
+  /* 
+    タイプ選択コンポーネントを包むコンテナ
+    - 上部に余白を設けて、入力フィールドとの間隔を確保します
+  */
+  .search-modal-type-select-wrapper {
+    margin-top: 20px;
+  }
+  
+  /* 
+    検索ボタンのラッパー
+    - 上部に余白を設け、ボタンを右寄せに配置します
+  */
+  .search-modal-button-wrapper {
+    margin-top: 16px;
+    text-align: right;
+  }
+  
+  /* 
+    検索ボタンのスタイル
+    - パディング、背景色、文字色、角丸、ボーダーなし、カーソル変更を設定します
+  */
+  .search-modal-search-button {
+    padding: 6px 12px;
+    background-color: blue;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  

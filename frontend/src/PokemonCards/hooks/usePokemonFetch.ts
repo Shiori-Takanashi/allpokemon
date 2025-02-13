@@ -14,7 +14,7 @@ export interface Endpoint {
  * @param initialUrl API の初期URL
  */
 export function usePokemonFetch(
-  initialUrl: string = "http://localhost:8000/api/paldea-pokemon/"
+  initialUrl: string = "http://localhost:8000/api/national-pokemon/"
 ) {
   const [apiUrl, setApiUrl] = useState(initialUrl);
   const [pokemonData, setPokemonData] = useState<Pokemon[]>([]);

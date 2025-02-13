@@ -36,7 +36,7 @@ export function usePokemonCards() {
   } = usePokemonFilter(pokemonData);
 
   // 3. ページネーション
-  const itemsPerPage = 30; // 1ページあたりの件数
+  const itemsPerPage = 48; // 1ページあたりの件数
   const {
     currentPage,
     setCurrentPage,

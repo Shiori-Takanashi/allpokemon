@@ -11,8 +11,10 @@ export interface Pokemon {
   base_c: number;
   base_d: number;
   base_s: number;
+  base_t: number;
   TYPE01: string;
   TYPE02?: string;
+  img: string;
 }
 
 /**
@@ -22,3 +24,4 @@ export async function fetchPokemons(apiUrl: string): Promise<Pokemon[]> {
   const response = await axios.get<Pokemon[]>(apiUrl);
   return response.data;
 }
+

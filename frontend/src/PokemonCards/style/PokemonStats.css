@@ -1,0 +1,32 @@
+/* ポケモンステータスのテーブル */
+.pokemon-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    table-layout: fixed; /* 列幅を固定 */
+  }
+  
+  .pokemon-stats-row-even {
+    background-color: #f0f0f0;
+  }
+  
+  .pokemon-stats-row-odd {
+    background-color: #e0e0e0;
+  }
+  
+  .pokemon-stats-label,
+  .pokemon-stats-value {
+    text-align: center;
+    padding: 0px;
+    border: 1px solid #ccc;
+  }
+  
+  .pokemon-stats-label {
+    width: 20%;
+    font-weight: bold;
+  }
+  
+  .pokemon-stats-value {
+    width: 80%;
+    white-space: nowrap; /* 折り返しを防ぐ */
+  }
