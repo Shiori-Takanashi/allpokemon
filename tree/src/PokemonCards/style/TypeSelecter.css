@@ -1,0 +1,37 @@
+/* // src/PokemonCards/style/TypeSelecter.css */
+
+/* コンポーネント全体のコンテナの背景や余白、角丸を定義 */
+.type-select-container {
+    background: #f0f0f0;
+    padding: 8px;
+    border-radius: 4px;
+}
+  
+/* 内部の要素を横並びにし、中央揃えと間隔を設定 */
+.type-select-inner {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+/* React Select の control 部分のスタイル */
+/* classNamePrefix="custom-select" を設定すると、以下のクラスが付与されます */
+.custom-select__control {
+width: 120px;
+text-align: center;
+}
+
+/* 選択された値の表示部分のスタイル */
+.custom-select__single-value {
+text-align: center;
+}
+
+/* ドロップダウン内の各オプションのスタイル */
+.custom-select__option {
+text-align: center;
+}
+
+/* オプションリスト全体のスタイル */
+.custom-select__menu {
+text-align: center;
+}

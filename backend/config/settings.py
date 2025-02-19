@@ -137,6 +137,8 @@ POKEAPI_OUTPUT_DIR = os.path.join(BASE_DIR, 'data')
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React 開発サーバーの URL
     "http://127.0.0.1:3000",  # 別の形式でのローカル URL
+    "http://localhost:5173",  # React 開発サーバーの URL
+    "http://127.0.0.1:5173",
 ]
 
 DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'

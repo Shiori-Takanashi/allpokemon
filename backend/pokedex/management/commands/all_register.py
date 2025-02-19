@@ -8,7 +8,7 @@ from django.core.management.base import BaseCommand
 from django.db import transaction
 from tqdm import tqdm
 
-from pokedex.models import Pokemon
+from pokedex.models.pokemon import Pokemon
 
 
 class Command(BaseCommand):

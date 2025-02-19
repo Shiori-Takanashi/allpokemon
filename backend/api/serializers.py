@@ -1,18 +1,8 @@
 from rest_framework import serializers
-from pokedex.models import Pokemon
+from pokedex.models.pokemon import Pokemon
 
 class DefaultSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Pokemon
-        fields = "__all__"
-
-class AllPokemonDexSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Pokemon
-        fields = "__all__"
-        
-    
-class SinglePokemonSerializer(serializers.ModelSerializer):
+    # カスタムフィールドの定義
     ids = serializers.SerializerMethodField()
     names = serializers.SerializerMethodField()
     images = serializers.SerializerMethodField()
@@ -25,20 +15,29 @@ class SinglePokemonSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Pokemon
+        # 必要なフィールドのみを明示的に指定（例）
         fields = [
+            "original",
             "ids",
-            "names", "images", "type_", "abilities", "stats",
-            "original", "exists_in_generations", "dex_numbers",
-            "json_files"
+            "names",
+            "images",
+            "type_",
+            "abilities",
+            "stats",
+            "exists_in_generations",
+            "dex_numbers",
+            "json_files",
+        # カスタムフィールド以外に必要なモデルフィールドがあれば追加
         ]
-    def get_ids(self,obj):
+
+    def get_ids(self, obj):
         return {
             "unique_id": obj.unique_id,
             "species_id": obj.species_id,
             "pokemon_id": obj.pokemon_id,
             "form_id": obj.form_id
         }
-        
+
     def get_names(self, obj):
         return {
             "ja": obj.ja,
@@ -49,8 +48,8 @@ class SinglePokemonSerializer(serializers.ModelSerializer):
 
     def get_images(self, obj):
         return {
-            "frontUrl": obj.image_front_url,
-            "frontImage": obj.image_front.url if obj.image_front else None
+            "frontUrl": obj.front_default_url,
+            "frontShinyUrl": obj.front_shiny_url
         }
 
     def get_type_(self, obj):

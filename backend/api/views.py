@@ -1,133 +1,150 @@
 from rest_framework.generics import ListAPIView
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from django.shortcuts import get_object_or_404
-from pokedex.models import Pokemon
-from .serializers import AllPokemonDexSerializer, SinglePokemonSerializer,  DefaultSerializer
+from rest_framework.pagination import PageNumberPagination
 from django.db.models import Q
-from typing import final  # Python 3.8以降のみ有効
+from pokedex.models.pokemon import Pokemon
+from .serializers import DefaultSerializer
 
-import random
+# ページネーション（同じ）
+from rest_framework.generics import ListAPIView
+from rest_framework.pagination import PageNumberPagination
+from django.db.models import Q
+from pokedex.models.pokemon import Pokemon
+from .serializers import DefaultSerializer
 
-class DefaultView(ListAPIView):
-        queryset = Pokemon.objects.all()
-        serializer_class =  DefaultSerializer
+from rest_framework.pagination import LimitOffsetPagination
 
-class RandomSinglePokemonView(APIView):
-    def get(self, request, format=None):
-        unique_id = request.query_params.get('unique_id', None)
-        if unique_id:
-            try:
-                pokemon = Pokemon.objects.get(unique_id=unique_id)
-            except Pokemon.DoesNotExist:
-                return Response(
-                    {"error": f"unique_id {unique_id} のポケモンが存在しません。"},
-                    status=404
-                )
-        else:
-            # ランダムに1件取得する（小規模なテーブルの場合は order_by('?') でもOK）
-            pokemon = Pokemon.objects.order_by('?').first()
-            if not pokemon:
-                return Response({"error": "ポケモンのデータが存在しません。"}, status=404)
-        
-        serializer = SinglePokemonSerializer(pokemon)
-        return Response(serializer.data)
-
+class StandardResultsSetPagination(LimitOffsetPagination):
+    # デフォルトで1ページあたり24件表示
+    default_limit = 24
+    # クエリパラメータ名を 'limit' に設定
+    limit_query_param = 'limit'
+    # クエリパラメータ名を 'offset' に設定
+    offset_query_param = 'offset'
+    # 最大件数は72件までとする
+    max_limit = 72
 
 class BasePokemonListView(ListAPIView):
     """
-    共通の list() メソッドとレスポンス用辞書生成処理を定義する基底クラス。
-    サブクラスでは get_queryset() のみを定義してください。
-
-    ※ get_result() は全クラスで共通の処理とするため、override しないでください。
+    シリアライザーによるデータ加工をそのまま利用するベースクラスです。
+    - サブクラスは build_queryset() を実装して、各エンドポイント固有の条件を追加してください。
+    - 本クラスで、ステータスに対する op/line のフィルタを行います。
     """
     serializer_class = DefaultSerializer
-    total_line = 0  # 例：TOTAL_LINEの値（必要に応じて変更）
+    pagination_class = StandardResultsSetPagination
 
-    @final
-    def get_result(self, pokemon):
-        """
-        各 Pokemon インスタンスからレスポンス用の辞書を生成する共通処理。
-        sub_ja に「メガ」が含まれる場合はその値を name とし、
-        それ以外は "ja(sub_ja)" 形式で name を生成します。
-        """
-        name = (
-            pokemon.sub_ja
-            if pokemon.sub_ja and "メガ" in pokemon.sub_ja
-            else f"{pokemon.ja}({pokemon.sub_ja})" if pokemon.sub_ja else pokemon.ja
-        )
+    # 省略時のデフォルト値を設定する必要があるならここで指定（op/lineともに省略が基本なのでとりあえずNone）
+    h_op = None
+    h_line = None
+    a_op = None
+    a_line = None
+    b_op = None
+    b_line = None
+    c_op = None
+    c_line = None
+    d_op = None
+    d_line = None
+    s_op = None
+    s_line = None
+    t_op = None
+    t_line = None
 
-        return {
-            "unique_id": pokemon.unique_id,
-            "name": name,
-            "sub_ja": pokemon.sub_ja,
-            "TYPE01": pokemon.type_first,
-            "TYPE02": pokemon.type_second,
-            "base_h": pokemon.base_h,
-            "base_a": pokemon.base_a,
-            "base_b": pokemon.base_b,
-            "base_c": pokemon.base_c,
-            "base_d": pokemon.base_d,
-            "base_s": pokemon.base_s,
-            "base_t": pokemon.base_t,
-            "img": pokemon.front_default_url  # 画像URLフィールド
+    def build_queryset(self):
+        """
+        サブクラスで実装予定。
+        """
+        raise NotImplementedError("Subclasses must implement build_queryset()")
+
+    def get_queryset(self):
+        # 1) ベースのクエリセットを取得（サブクラスで固有の条件を付与）
+        qs = self.build_queryset()
+
+        # 2) 画像URLが存在するものに限定
+        qs = qs.filter(front_default_url__isnull=False).exclude(front_default_url__exact="")
+
+        # 3) ステータスごとの op / line をフィルタリング
+        qs = self.filter_stats(qs)
+
+        return qs
+
+    def filter_stats(self, qs):
+        """
+        h_op, h_line, a_op, a_line, ..., t_op, t_line
+        といったクエリパラメータを解析して、フィルタに反映する。
+        op が「gte」「lte」「eq」のいずれかであれば適用、それ以外や未指定の場合は無視。
+        """
+        # まずはクエリパラメータから取得
+        request = self.request
+        # "h_op", "h_line" のようなキーをループでまとめて処理できるよう、マッピングを定義
+        stat_mapping = {
+            'h': 'base_h',
+            'a': 'base_a',
+            'b': 'base_b',
+            'c': 'base_c',
+            'd': 'base_d',
+            's': 'base_s',
+            't': 'base_t',
         }
 
-    def list(self, request, *args, **kwargs):
-        # get_queryset() で取得したクエリセットから、front_default_url が
-        # null でなく、かつ空文字（""）ではないものだけをフィルタリング
-        queryset = (
-            self.get_queryset()
-            .filter(front_default_url__isnull=False)
-            .exclude(front_default_url__exact="")
-        )
-        results = [self.get_result(pokemon) for pokemon in queryset]
-        return Response(results)
+        for short_key, field_name in stat_mapping.items():
+            op_key = f"{short_key}_op"     # 例: "h_op"
+            line_key = f"{short_key}_line" # 例: "h_line"
 
-    
+            op_value = request.query_params.get(op_key, None)
+            line_value = request.query_params.get(line_key, None)
 
-    
-class AllPokemonListView(BasePokemonListView):
-    """
-    すべてのポケモンを取得するビュー。
-      - 条件: base_t > total_line, original=True
-      - 除外: sub_ja にローマ字（英字）が含まれるものを除外
-    """
-    def get_queryset(self):
+            if not op_value or not line_value:
+                # どちらか欠けていればスキップ
+                continue
+
+            # オペレーターが "gte", "lte", "eq" のいずれかであれば適用
+            if op_value not in ["gte", "lte", "eq"]:
+                continue
+
+            # 数値に変換できなければスキップ
+            try:
+                line_int = int(line_value)
+            except ValueError:
+                continue
+
+            # フィールドに対するフィルタ式を組み立て
+            if op_value == "eq":
+                # 等しい (=)
+                filter_expr = {field_name: line_int}
+            else:
+                # "gte" or "lte"
+                filter_expr = {f"{field_name}__{op_value}": line_int}
+
+            qs = qs.filter(**filter_expr)
+
+        return qs
+
+
+# ----- 各地方のビュー -----
+
+class NationalPokemonListView(BasePokemonListView):
+    def build_queryset(self):
+        # original=True かつ sub_ja に英字が含まれないポケモンを全国版として返す例
         return Pokemon.objects.filter(
-            base_t__gt=self.total_line,
             original=True
         ).filter(
             ~Q(sub_ja__iregex=r'[A-Za-z]')
         ).order_by("ja")
 
+
 class GalarPokemonListView(BasePokemonListView):
-    """
-    ガラル地方のポケモンを取得するビュー。
-      - 追加条件: exist_generation_08=True
-      - 除外: sub_ja に「メガ」を含むものや、ローマ字（"gmax" は除外対象外）の条件を適用
-    """
-    def get_queryset(self):
+    def build_queryset(self):
         return Pokemon.objects.filter(
-            base_t__gt=self.total_line,
-            original=True,
             exist_generation_08=True
         ).filter(
             ~Q(sub_ja__icontains="メガ"),
             ~Q(sub_ja__iregex=r'[A-Za-z]') | Q(sub_ja="gmax")
         ).order_by("ja")
 
+
 class PaldeaPokemonListView(BasePokemonListView):
-    """
-    パルデア地方のポケモンを取得するビュー。
-      - 必要に応じて exist_generation_09=True などの条件を追加可能
-      - 除外: sub_ja に「メガ」を含むもの、またはローマ字（英字）が含まれるものを除外
-    """
-    def get_queryset(self):
+    def build_queryset(self):
         return Pokemon.objects.filter(
-            base_t__gt=self.total_line,
-            original=True,
-            exist_generation_09=True  # 条件が必要な場合はコメント解除
+            exist_generation_09=True
         ).filter(
             ~Q(sub_ja__icontains="メガ"),
             ~Q(sub_ja__iregex=r'[A-Za-z]')

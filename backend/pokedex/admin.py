@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.db.models.functions import Cast
 from django.db.models import F, IntegerField
-from pokedex.models import Pokemon
+from pokedex.models.pokemon import Pokemon
 from django.utils.html import mark_safe
 
 @admin.register(Pokemon)

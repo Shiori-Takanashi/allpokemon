@@ -1,0 +1,86 @@
+/* // src/PokemonCards/style/LinksModal.css */
+
+/* 
+  オーバーレイスタイル
+  - 画面全体を固定し、半透明の背景でモーダルを中央に配置します
+*/
+.links-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  /* 
+    モーダルコンテンツエリアのスタイル
+    - 白い背景、パディング、角丸を設定
+    - 幅は 400px 固定、最大幅は 90% でレスポンシブ対応
+    - position: relative により内部の絶対配置要素を配置可能にします
+    
+    ※ width と max-width と min-width の関係について：
+      - width: 400px は、通常時の固定幅を指定しています。
+      - max-width: 90% は、画面が狭い場合に幅が画面サイズの 90% を超えないようにするための指定です。
+      - min-width を指定しない場合、必要に応じて内容に合わせて幅が縮む可能性があります。
+        もし、モーダルの最小幅を保証したい場合は、min-width を追加することができます。
+        
+    ※ 追加の修正点 (背景色と高さについて)：
+      - 背景色を "#fff" から "#f9f9f9" に変更し、少し柔らかい印象に調整しました。
+      - height は明示的に指定せず、内容に応じて自動調整されますが、
+        max-height を 80vh (画面高さの80%) に設定し、画面が小さい場合でもモーダルが大きくなりすぎないようにしました。
+      - overflow-y: auto を追加して、内容が多い場合に垂直スクロールが発生するようにしています。
+  */
+  .links-modal-content {
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  /* 
+    ヘッダー（タイトル）のスタイル
+    - 上下に余白を設定し、コンテンツとの区切りを明確にします
+  */
+  .links-modal-heading {
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
+  
+  /* 
+    閉じるボタンのスタイル
+    - 右上に絶対配置し、背景は透明、フォントサイズは 16px に設定
+    - クリックするとモーダルを閉じる動作が実行されます
+  */
+  .links-modal-close-button {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* 
+    リンクを包むコンテナ内の各段落のスタイル
+    - マージンは 0、上下に 8px のパディングを設定しています
+  */
+  .links-modal-link-container p {
+    margin: 0;
+    padding: 8px 0;
+  }
+  
+  /* 
+    リンク自体のスタイル
+    - リンクテキストを青色に設定
+  */
+  .links-modal-link {
+    color: blue;
+  }
+  
