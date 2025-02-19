@@ -1,4 +1,0 @@
-lib/
-│   ├── directory_structure.txt
-│   ├── structure.py
-│   ├── structure.txt
