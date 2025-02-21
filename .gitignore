@@ -8,10 +8,6 @@ Thumbs.db
 # 環境設定関連
 # ==============================
 .vscode/
-.env*
-.env.local
-.env.development
-.env.production
 
 # ==============================
 # Python関連
@@ -24,10 +20,11 @@ __pycache__/
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Flask仮想環境
 backend/env/
 flask/env/
-flask/.venv/
+
+backend/data/
+backend/log/
 
 # SQLite データベース
 db.sqlite3

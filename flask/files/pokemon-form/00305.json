@@ -1,0 +1,46 @@
+{
+    "form_name": "",
+    "form_names": [],
+    "form_order": 1,
+    "id": 305,
+    "is_battle_only": false,
+    "is_default": true,
+    "is_mega": false,
+    "name": "lairon",
+    "names": [],
+    "order": 438,
+    "pokemon": {
+        "name": "lairon",
+        "url": "https://pokeapi.co/api/v2/pokemon/305/"
+    },
+    "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/305.png",
+        "back_female": null,
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/305.png",
+        "back_shiny_female": null,
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/305.png",
+        "front_female": null,
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/305.png",
+        "front_shiny_female": null
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "steel",
+                "url": "https://pokeapi.co/api/v2/type/9/"
+            }
+        },
+        {
+            "slot": 2,
+            "type": {
+                "name": "rock",
+                "url": "https://pokeapi.co/api/v2/type/6/"
+            }
+        }
+    ],
+    "version_group": {
+        "name": "ruby-sapphire",
+        "url": "https://pokeapi.co/api/v2/version-group/5/"
+    }
+}
