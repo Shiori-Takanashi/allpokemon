@@ -88,6 +88,7 @@ next-env.d.ts
 # その他
 # ==============================
 *.pem
-files/
-data/
-
+chakra/
+lib/
+tree/
+_frontend/
