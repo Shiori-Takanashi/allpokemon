@@ -22,7 +22,7 @@ const StatusGroup: React.FC<StatusGroupProps> = ({ statuses, setStatuses }) => {
   };
 
   return (
-    <Box bg="teal.50" p={4} borderRadius="md">
+    <Box justifyItems="center">
       <StatusSetters statuses={statuses} updateStatus={updateStatus} />
     </Box>
   );

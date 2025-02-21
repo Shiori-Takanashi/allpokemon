@@ -20,25 +20,44 @@ interface Props {
 
 const SearchDataDisplay: React.FC<Props> = ({ data }) => {
   return (
-    <Box mt={4} width="100%">
+    <Box mt={4} width="100%" justifyItems="center">
       {/* 総件数 */}
-      <Text fontSize="lg" fontWeight="bold" mb={4}>
+      <Text fontSize="xl" fontWeight="bold" m="6">
         {data.count}件
       </Text>
 
-      <SimpleGrid columns={[1, 2, 3, 4]} gap={4}>
+      <SimpleGrid columns={[1, 2, 3, 4, 6, 8]} gap={4}>
         {data.results.map((pokemon: PokemonDetail) => (
           <Card.Root key={pokemon.ids.unique_id} border="1px solid #ccc">
             <CardHeader alignItems="center">
-              <Text fontWeight="semibold">{pokemon.names.ja}</Text>
+              {!pokemon.names.subJa ? (
+                  <Text fontWeight="semibold" color="gray.900">
+                    {pokemon.names.ja} 
+                  </Text>
+                ) : (
+                  !pokemon.names.subJa.includes("メガ") ? (
+                    <>
+                    <Text fontWeight="semibold" color="gray.900">
+                      {pokemon.names.ja}
+                    </Text>
+                    <Text color="gray.900" fontSize="xs">
+                      {pokemon.names.subJa}
+                    </Text>
+                    </>
+                    ):(
+                      <Text fontWeight="semibold" color="gray.900">
+                        {pokemon.names.subJa}
+                      </Text>
+                    )
+                )
+              }
             </CardHeader>
             <CardBody display="flex" alignItems="center" justifyContent="center">
               {pokemon.images.frontUrl ? (
                 <Image
                   src={pokemon.images.frontUrl}
                   alt={pokemon.names.ja}
-                  boxSize="80px"
-                  objectFit="cover"
+                  boxSize="90px"
                 />
               ) : (
                 <Text>画像なし</Text>

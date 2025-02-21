@@ -139,6 +139,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",  # 別の形式でのローカル URL
     "http://localhost:5173",  # React 開発サーバーの URL
     "http://127.0.0.1:5173",
+    "http://localhost:3001",  # React 開発サーバーの URL
+    "http://127.0.0.1:3001",  # 別の形式でのローカル URL
+    "http://localhost:3002",  # React 開発サーバーの URL
+    "http://127.0.0.1:3002",
+    
 ]
 
 DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'

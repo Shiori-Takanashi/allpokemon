@@ -1,6 +1,4 @@
 // src/pages/index.tsx
-"use client";
-
 import React from "react";
 import SearchPage from "@/PokemonCards/components/SearchPage";
 

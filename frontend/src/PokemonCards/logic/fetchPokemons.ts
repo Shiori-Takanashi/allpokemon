@@ -1,4 +1,5 @@
 // src/PokemonCards/logic/fetchPokemons.ts
+"use client";
 import { PokemonListResponse } from "../types/types";
 
 /**

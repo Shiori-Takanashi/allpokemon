@@ -1,4 +1,5 @@
 // src/PokemonCards/components/createRequestUrl.ts
+"use client";
 import { Status } from "@/PokemonCards/types/types";
 
 /**

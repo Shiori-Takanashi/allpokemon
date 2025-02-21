@@ -1,7 +1,6 @@
-// src/PokemonCards/components/SearchPage.tsx
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Box, Text } from "@chakra-ui/react";
 
 import { Status, PokemonListResponse } from "@/PokemonCards/types/types";
@@ -10,111 +9,128 @@ import SearchDataDisplay from "./SearchDataDisplay";
 import PaginationControls from "./PaginationControls";
 import StatusGroup from "./StatusGroup";
 import ShowStatuses from "./ShowStatuses";
-import { toaster } from "@/components/ui/toaster";
 
-const LIMIT = 48; // 1ページあたりの件数を48に
+// 共通のトースト関数をインポート
+import {
+  showToastSuccess,
+  showToastError,
+  showToastWarning,
+} from "@/components/ui/toaster";
+
+const LIMIT = 48; // 1ページあたりの件数
 
 const SearchPage: React.FC = () => {
-  // フィルター配列
-  const [statuses, setStatuses] = useState<Status[]>([
-    {
-      selectedStat: { label: "---", value: "none" },
-      selectedOperator: { label: "---", value: "none" },
-      value: "",
-    },
-    {
-      selectedStat: { label: "---", value: "none" },
-      selectedOperator: { label: "---", value: "none" },
-      value: "",
-    },
-    {
-      selectedStat: { label: "---", value: "none" },
-      selectedOperator: { label: "---", value: "none" },
-      value: "",
-    },
-    {
-      selectedStat: { label: "---", value: "none" },
-      selectedOperator: { label: "---", value: "none" },
-      value: "",
-    },
-  ]);
+  const initialStatus = {
+    selectedStat: { label: "---", value: "none" },
+    selectedOperator: { label: "---", value: "none" },
+    value: "",
+  };
 
-  // ページネーションの offset
-  const [offset, setOffset] = useState(0);
+  const [statuses, setStatuses] = useState<Status[]>(
+    Array.from({ length: 4 }, () => initialStatus)
+  );
 
-  // 取得した検索結果データ
+  const [offset, setOffset] = useState<number>(0);
   const [searchData, setSearchData] = useState<PokemonListResponse | null>(null);
 
-  // フィルタ実行時に呼ばれる関数
-  const handleFilter = () => {
-    // フィルタを変えたら最初のページ(offset=0)に戻す
-    setOffset(0);
-    fetchData(0);
-  };
-
-  // 実際にデータを取得する関数
-  const fetchData = async (currentOffset: number) => {
-    const effectiveStatuses = statuses.filter((st) => {
-      const noneStat = st.selectedStat.value === "none";
-      const noneOp = st.selectedOperator.value === "none";
-      const emptyVal = !st.value.trim();
-      return !(noneStat || noneOp || emptyVal);
-    });
-
-    // createRequestUrl でフィルタ＋オフセットをまとめてクエリ化
-    const url = createRequestUrl(
-      "http://localhost:8000/api/national-pokemon/",
-      effectiveStatuses,
-      currentOffset,
-      LIMIT
-    );
-    try {
-      const res = await fetch(url);
-      if (!res.ok) {
-        throw new Error(`サーバーエラー: ${res.status}`);
+  /**
+   * 重複するステータスがないかチェックする関数
+   * 重複があればトーストを表示して false を返す
+   */
+  const validateStatuses = useCallback((): boolean => {
+    const statusCount: Record<string, number> = {};
+    for (const st of statuses) {
+      const key = st.selectedStat.value;
+      if (key !== "none" && key !== "") {
+        statusCount[key] = (statusCount[key] || 0) + 1;
+        if (statusCount[key] > 1) {
+          showToastWarning({
+            description:
+              "同じステータスに複数の条件があります。\nフィルターを実行しません。",
+          });
+          return false;
+        }
       }
-      const data: PokemonListResponse = await res.json();
-      setSearchData(data);
-
-      toaster.create({
-        description: `データを取得しました (offset=${currentOffset})`,
-        type: "info",
-      });
-    } catch (error) {
-      console.error("fetchData error:", error);
-      toaster.create({
-        description: `データ取得エラー: ${String(error)}`,
-        type: "error",
-      });
     }
-  };
+    return true;
+  }, [statuses]);
 
-  // 初回マウント時のみ、全件(offset=0)を取得
+  /**
+   * 有効なフィルター条件を抽出する関数
+   */
+  const getEffectiveStatuses = useCallback((): Status[] => {
+    return statuses.filter((st) => {
+      const isNoneStat = st.selectedStat.value === "none";
+      const isNoneOp = st.selectedOperator.value === "none";
+      const isEmptyValue = !st.value.trim();
+      return !(isNoneStat || isNoneOp || isEmptyValue);
+    });
+  }, [statuses]);
+
+  /**
+   * API からデータを取得する関数
+   * @param currentOffset ページネーション用のオフセット
+   * @param showToastOnSuccess 成功時にトーストを表示するか
+   */
+  const fetchData = useCallback(
+    async (currentOffset: number, showToastOnSuccess = false) => {
+      const effectiveStatuses = getEffectiveStatuses();
+      const url = createRequestUrl(
+        "http://localhost:8000/api/national-pokemon/",
+        effectiveStatuses,
+        currentOffset,
+        LIMIT
+      );
+      try {
+        const res = await fetch(url);
+        if (!res.ok) {
+          throw new Error(`サーバーエラー: ${res.status}`);
+        }
+        const data: PokemonListResponse = await res.json();
+        setSearchData(data);
+
+        if (showToastOnSuccess) {
+          showToastSuccess({ description: "データ取得に成功" });
+        }
+      } catch (error) {
+        console.error("fetchData error:", error);
+        showToastError({
+          description: `データ取得に失敗: ${String(error)}`,
+        });
+      }
+    },
+    [getEffectiveStatuses]
+  );
+
+  /**
+   * フィルター実行ハンドラ
+   *  - 重複チェック → ページリセット → データ取得
+   */
+  const handleFilter = useCallback(() => {
+    if (!validateStatuses()) return;
+    setOffset(0);
+    fetchData(0, true);
+  }, [validateStatuses, fetchData]);
+
+  // 初回マウント時に全件取得
   useEffect(() => {
     fetchData(0);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fetchData]);
+
+  // offset 変更時にデータ取得（ページネーション用）
+  useEffect(() => {
+    fetchData(offset, false);
+  }, [offset, fetchData]);
+
+  // PaginationControls から呼ばれるオフセット更新用コールバック
+  const onOffsetChange = useCallback((newOffset: number) => {
+    setOffset(newOffset);
   }, []);
 
-  // ページネーションが変化したら再取得
-  useEffect(() => {
-    fetchData(offset);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [offset]);
-
-  // offset を更新するコールバック（PaginationControls から呼ばれる）
-  const onOffsetChange = (newOffset: number) => {
-    setOffset(newOffset);
-  };
-
   return (
-    <Box width="100%" maxW="1200px" mx="auto" mt={4}>
-      {/* フィルタ入力 */}
-      <StatusGroup statuses={statuses} setStatuses={setStatuses} />
-
-      {/* フィルタ実行ボタン (ShowStatuses) */}
+    <Box width="100%" p="9">
       <ShowStatuses statuses={statuses} onFilter={handleFilter} />
-
-      {/* 検索結果 */}
+      <StatusGroup statuses={statuses} setStatuses={setStatuses} />
       {searchData ? (
         <>
           <SearchDataDisplay data={searchData} />

@@ -6,18 +6,17 @@ import Select, { components, OptionProps } from "react-select";
 import { Box } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { NumericFormat } from "react-number-format";
-import { OptionType, StatusSetterProps } from "@/PokemonCards02/types/types";
+import { OptionType, StatusSetterProps } from "@/PokemonCards/types/types";
 
 /* ===============================
-   1. 共通スタイル（react-select等に適用）
+   1. 共通スタイル (react-select等)
 ================================= */
 const commonControlStyles = {
-  width: "92px",
-  height: "32px",
+  width: "70px",
   minHeight: "32px",
   border: "1px solid #ccc",
   borderRadius: "4px",
-  fontSize: "1rem",
+  fontSize: "0.8rem",
   display: "flex",
   alignItems: "center",
   lineHeight: "1rem",
@@ -69,7 +68,7 @@ const selectStyles = {
   }),
 };
 
-/** react-select の Option コンポーネントを上書き（ラベル表示のカスタマイズなどが可能） */
+/** react-select の Option コンポーネントを上書き (ラベル表示のカスタマイズなど) */
 const CustomOption = (props: OptionProps<OptionType>) => (
   <components.Option {...props}>{props.children}</components.Option>
 );
@@ -90,12 +89,11 @@ const StyledNumericFormat = styled(NumericFormat)`
   padding: 0;
   &:focus {
     outline: none;
-    border-color: #69a2ff; /* フォーカス時の色を変更 */
   }
 `;
 
 /* ===============================
-   3. 「---」を含む選択肢データ
+   3. ドロップダウン用オプション
 ================================= */
 const stats: OptionType[] = [
   { label: "---", value: "none" },
@@ -108,7 +106,7 @@ const stats: OptionType[] = [
   { label: "合計", value: "tLine" },
 ];
 
-const operator: OptionType[] = [
+const operators: OptionType[] = [
   { label: "---", value: "none" },
   { label: "一致", value: "eq" },
   { label: "以上", value: "gte" },
@@ -125,48 +123,51 @@ const StatusSetter: React.FC<StatusSetterProps> = ({
   setSelectedOperator,
   value,
   setValue,
-}) => (
-  <Box
-    // wrapper相当のスタイルを統合
-    display="flex"
-    flexDirection="column"
-    alignItems="center"
-    padding="1rem"
-    backgroundColor="#f0f2f5"
-    width="120px"
-    borderRadius="md"
-  >
-    {/* ステータス選択 */}
-    <Select<OptionType>
-      options={stats}
-      value={selectedStat}
-      onChange={(option) => option && setSelectedStat(option)}
-      isSearchable={false}
-      components={customComponents}
-      styles={selectStyles}
-    />
-
-    {/* 演算子選択 */}
-    <Box marginTop="8px">
+  instanceId,
+}) => {
+  return (
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      padding="12px 3px"
+      backgroundColor="#f0f2f5"
+    >
+      {/* ステータス選択 */}
       <Select<OptionType>
-        options={operator}
-        value={selectedOperator}
-        onChange={(option) => option && setSelectedOperator(option)}
+        // SSR時のID不整合を防ぐためのプロップ
+        instanceId={instanceId ? `${instanceId}-stat` : undefined}
+        options={stats}
+        value={selectedStat}
+        onChange={(option) => option && setSelectedStat(option)}
         isSearchable={false}
         components={customComponents}
         styles={selectStyles}
       />
-    </Box>
 
-    {/* 数値入力 */}
-    <Box marginTop="8px">
-      <StyledNumericFormat
-        value={value}
-        placeholder="数値"
-        onValueChange={(values) => setValue(values.value)}
-      />
+      {/* 演算子選択 */}
+      <Box mt="8px">
+        <Select<OptionType>
+          instanceId={instanceId ? `${instanceId}-op` : undefined}
+          options={operators}
+          value={selectedOperator}
+          onChange={(option) => option && setSelectedOperator(option)}
+          isSearchable={false}
+          components={customComponents}
+          styles={selectStyles}
+        />
+      </Box>
+
+      {/* 数値入力 */}
+      <Box mt="8px">
+        <StyledNumericFormat
+          value={value}
+          placeholder="数値"
+          onValueChange={(values) => setValue(values.value)}
+        />
+      </Box>
     </Box>
-  </Box>
-);
+  );
+};
 
 export default StatusSetter;
